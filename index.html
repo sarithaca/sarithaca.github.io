@@ -21,11 +21,11 @@
     h1, h2, h3 { font-family: 'Poiret One', cursive; }
 
     /* Hero Gradient */
-    .gradient-hero { background: linear-gradient(135deg, #00ffff, #00cccc); }
+    .gradient-hero { background: linear-gradient(135deg, #00cccc, #00ffff); }
 
-    /* From About Me downward: cyan to light turquoise gradient */
+    /* From About Me downward: cyan to lighter cyan */
     .gradient-from-about {
-      background: linear-gradient(to bottom, #00ffff, #99f0ff);
+      background: linear-gradient(to bottom, #00ffff, #ccffff);
       transition: background 0.5s ease;
     }
 
@@ -128,52 +128,4 @@
     <div class="max-w-6xl mx-auto px-6 text-center hover-card">
       <h2 class="text-3xl font-bold text-cyan-600 mb-10">Latest Projects</h2>
       <div id="github-projects" class="grid md:grid-cols-2 gap-8 hover-content"></div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section id="certifications" class="py-20 gradient-from-about" data-aos="fade-up">
-    <div class="max-w-4xl mx-auto px-6 text-center hover-card">
-      <h2 class="text-3xl font-bold text-cyan-600 mb-8">Certifications</h2>
-      <div class="flex justify-center space-x-4 flex-wrap hover-content">
-        <img src="https://img.icons8.com/color/48/000000/ISTQB.png" alt="ISTQB">
-        <img src="https://img.icons8.com/color/48/000000/CSM.png" alt="CSM">
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <footer class="py-10 text-center text-gray-700">
-    <p>📫 Reach me at <a href="mailto:saritha.c.ayyappan@gmail.com" class="text-cyan-600 hover:underline">saritha.c.ayyappan@gmail.com</a></p>
-    <p class="mt-2">
-      <a href="https://www.linkedin.com/in/saritha-ayyappan-9bb70810/" class="mx-2 hover:text-cyan-600">LinkedIn</a> |
-      <a href="https://github.com/sarithaca" class="mx-2 hover:text-cyan-600">GitHub</a>
-    </p>
-    <p class="mt-4 text-xs text-gray-500">© 2025 Saritha Ayyappan</p>
-  </footer>
-
-  <script>
-    AOS.init();
-
-    // GitHub Projects Dynamic Fetch
-    fetch('https://api.github.com/users/sarithaca/repos?sort=updated&per_page=4')
-      .then(res => res.json())
-      .then(repos => {
-        const container = document.getElementById('github-projects');
-        repos.forEach(repo => {
-          const card = document.createElement('div');
-          card.className = 'project-card';
-          card.innerHTML = `
-            <h3 class="text-xl font-semibold text-cyan-600 mb-2">
-              <a href="${repo.html_url}" target="_blank">${repo.name}</a>
-            </h3>
-            <p class="text-cyan-900">${repo.description || ''}</p>
-          `;
-          container.appendChild(card);
-        });
-      })
-      .catch(err => console.error('Error fetching GitHub repos:', err));
-  </script>
-
-</body>
-</html>
+   
