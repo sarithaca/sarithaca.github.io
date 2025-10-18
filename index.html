@@ -128,13 +128,14 @@
     </div>
   </section>
 
- <!-- CERTIFICATIONS -->
+  <!-- CERTIFICATIONS -->
   <section id="certifications" class="py-20 bg-[#101b33]" data-aos="fade-up">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h2 class="text-3xl font-bold text-cyan-400 mb-8">Certifications</h2>
       <div class="flex justify-center space-x-4 flex-wrap">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/ISTQB_logo.png" alt="ISTQB">
-        <img src="https://www.scrumalliance.org/-/media/ScrumAlliance/Images/Global/Logos/CSM-Logo.png" alt="CSM">
+        <img src="https://img.icons8.com/color/48/000000/CSM.png" alt="CSM">
+        <img src="https://img.icons8.com/color/48/000000/ISTQB.png" alt="ISTQB">
+
       </div>
     </div>
   </section>
@@ -160,7 +161,7 @@
         data.forEach(repo => {
           const div = document.createElement('div');
           div.className = 'bg-[#0f1a2b] p-6 rounded-xl shadow hover:shadow-cyan-500/30 transition';
-          div.innerHTML = <h3 class='text-xl font-semibold text-cyan-400 mb-2'><a href='${repo.html_url}' target='_blank'>${repo.name}</a></h3><p class='text-gray-300'>${repo.description || ''}</p>;
+          div.innerHTML = `<h3 class='text-xl font-semibold text-cyan-400 mb-2'><a href='${repo.html_url}' target='_blank'>${repo.name}</a></h3><p class='text-gray-300'>${repo.description || ''}</p>`;
           container.appendChild(div);
         });
       });
