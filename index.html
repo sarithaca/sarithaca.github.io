@@ -10,45 +10,24 @@
   <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- Inter Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
   <!-- Custom Styles -->
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    .gradient-bg {
-      background: linear-gradient(135deg, #6b5b95, #00bfae);
-    }
-    .avatar {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 5px solid white;
-      margin-bottom: 20px;
-    }
-    /* Floating circle animation */
-    .circle {
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background: #00f0ff;
-      margin-bottom: 12px;
-      animation: float 2s ease-in-out infinite alternate;
-    }
-    @keyframes float {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-10px); }
-    }
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3 { font-family: 'Poppins', sans-serif; }
+    .gradient-bg { background: linear-gradient(135deg, #6b5b95, #00bfae); }
+    .avatar { width: 150px; height: 150px; border-radius: 50%; border: 5px solid white; margin-bottom: 20px; transition: transform 0.5s; }
+    .avatar:hover { transform: scale(1.05); }
   </style>
 </head>
 <body class="bg-[#0b1221] text-gray-200 leading-relaxed">
 
   <!-- HERO -->
   <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 gradient-bg">
-    <!-- Animated Circle -->
-    <div class="circle"></div>
+    <!-- Floating Circle -->
+    <div class="w-4 h-4 rounded-full bg-cyan-400 animate-bounce mb-4"></div>
     <!-- Avatar -->
     <img src="https://via.placeholder.com/150" alt="Saritha Ayyappan" class="avatar">
     <!-- Name -->
@@ -79,92 +58,4 @@
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-3xl font-bold text-center text-cyan-400 mb-10">Technical Acumen</h2>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-[#0f1a2b] p-6 rounded-xl shadow hover:shadow-cyan-400/30 transition">
-          <h3 class="text-xl font-semibold text-cyan-400 mb-2">Automation & Testing</h3>
-          <p>UFT, Selenium, CI/CD, Functional, Regression, ETL Testing, API Testing (SOAP UI, Postman, Parasoft)</p>
-        </div>
-        <div class="bg-[#0f1a2b] p-6 rounded-xl shadow hover:shadow-cyan-400/30 transition">
-          <h3 class="text-xl font-semibold text-cyan-400 mb-2">Tools & Technologies</h3>
-          <p>JIRA, ALM, Rational Quality Manager, Informatica, Control M, Autosys, Salesforce (Winter '19), MS Project</p>
-        </div>
-        <div class="bg-[#0f1a2b] p-6 rounded-xl shadow hover:shadow-cyan-400/30 transition">
-          <h3 class="text-xl font-semibold text-cyan-400 mb-2">Programming & Databases</h3>
-          <p>SQL, VBScript, Shell, Java, XML, HTML, Oracle, DB2, MySQL, SQL Server</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience" class="py-20 bg-[#101b33]" data-aos="fade-up">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center text-cyan-400 mb-10">Professional Experience</h2>
-      <!-- Add experience cards here -->
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section id="testimonials" class="py-20" data-aos="fade-up">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-cyan-400 mb-10">Testimonials</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-[#0f1a2b] p-6 rounded-xl shadow hover:shadow-cyan-500/30 transition">
-          <p class="text-gray-300 italic">"Saritha's QA expertise ensured our project launched flawlessly. Highly recommended!"</p>
-          <p class="text-cyan-400 mt-2">- Colleague/Manager</p>
-        </div>
-        <div class="bg-[#0f1a2b] p-6 rounded-xl shadow hover:shadow-cyan-500/30 transition">
-          <p class="text-gray-300 italic">"Her automation skills saved us weeks of effort and improved process efficiency."</p>
-          <p class="text-cyan-400 mt-2">- Team Lead</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GITHUB PROJECTS -->
-  <section id="projects" class="py-20" data-aos="fade-up">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-cyan-400 mb-10">Latest Projects</h2>
-      <div id="github-projects" class="grid md:grid-cols-2 gap-8"></div>
-    </div>
-  </section>
-
- <!-- CERTIFICATIONS -->
-  <section id="certifications" class="py-20 bg-[#101b33]" data-aos="fade-up">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-cyan-400 mb-8">Certifications</h2>
-      <div class="flex justify-center space-x-4 flex-wrap">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/ISTQB_logo.png" alt="ISTQB">
-        <img src="https://www.scrumalliance.org/-/media/ScrumAlliance/Images/Global/Logos/CSM-Logo.png" alt="CSM">
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <footer class="py-10 text-center text-gray-400">
-    <p>📫 Reach me at <a href="mailto:saritha.c.ayyappan@gmail.com" class="text-cyan-400 hover:underline">saritha.c.ayyappan@gmail.com</a></p>
-    <p class="mt-2">
-      <a href="https://www.linkedin.com/in/saritha-ayyappan-9bb70810/" class="mx-2 hover:text-cyan-400">LinkedIn</a> |
-      <a href="https://github.com/sarithaca" class="mx-2 hover:text-cyan-400">GitHub</a>
-    </p>
-    <p class="mt-4 text-xs text-gray-500">© 2025 Saritha Ayyappan | Lead QA Engineer Portfolio</p>
-  </footer>
-
-  <script>
-    AOS.init();
-
-    // GitHub Projects
-    fetch('https://api.github.com/users/sarithaca/repos?sort=updated&per_page=4')
-      .then(res => res.json())
-      .then(data => {
-        const container = document.getElementById('github-projects');
-        data.forEach(repo => {
-          const div = document.createElement('div');
-          div.className = 'bg-[#0f1a2b] p-6 rounded-xl shadow hover:shadow-cyan-500/30 transition';
-          div.innerHTML = `<h3 class='text-xl font-semibold text-cyan-400 mb-2'><a href='${repo.html_url}' target='_blank'>${repo.name}</a></h3><p class='text-gray-300'>${repo.description || ''}</p>`;
-          container.appendChild(div);
-        });
-      });
-  </script>
-
-</body>
-</html>
+        <div class="bg-[#0f1a2b
