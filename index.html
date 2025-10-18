@@ -16,64 +16,32 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <style>
-    body { font-family: 'Text Me One', sans-serif; margin: 0; }
-
+    /* Fonts */
+    body { font-family: 'Text Me One', sans-serif; background-color: #0b1221; color: #e0e0e0; }
     h1, h2, h3 { font-family: 'Poiret One', cursive; }
 
-    /* Hero Gradient */
-    .gradient-hero { background: linear-gradient(135deg, #00cccc, #00ffff); }
-
-    /* From About Me downward: cyan to lighter cyan */
-    .gradient-from-about {
-      background: linear-gradient(to bottom, #00ffff, #ccffff);
-      transition: background 0.5s ease;
-    }
+    /* Gradient Hero */
+    .gradient-bg { background: linear-gradient(135deg, #006666, #00ffff); }
 
     /* Avatar */
     .avatar { width: 150px; height: 150px; border-radius: 50%; border: 4px solid white; margin-bottom: 20px; }
 
-    /* Cards hover effect */
-    .hover-card {
-      background: rgba(255,255,255,0.05);
-      padding: 2rem;
-      border-radius: 1rem;
-      transition: transform 0.3s ease, background 0.3s ease;
-      overflow: hidden;
-      cursor: pointer;
-      margin-bottom: 1rem;
-    }
+    /* Menu */
+    .menu-nav a { display: block; margin: 5px 0; color: #00ffff; font-weight: bold; text-decoration: none; transition: 0.2s; }
+    .menu-nav a:hover { color: #ffffff; }
 
-    /* Hidden content initially */
-    .hover-content { 
-      opacity: 0; 
-      max-height: 0; 
-      transition: opacity 0.4s ease, max-height 0.4s ease;
-    }
-
-    .hover-card:hover .hover-content { 
-      opacity: 1; 
-      max-height: 500px; 
-    }
-
-    /* Project cards */
-    .project-card {
-      background: rgba(255,255,255,0.05);
-      padding: 1.5rem;
-      border-radius: 0.75rem;
-      transition: transform 0.3s ease, background 0.3s ease;
-    }
-    .project-card a { color: #003333; text-decoration: underline; }
-
+    .project-card { background: #0f1a2b; padding: 1rem; border-radius: 0.75rem; margin-bottom: 1rem; }
+    .project-card a { color: #00ffff; text-decoration: underline; }
   </style>
 </head>
 
 <body class="leading-relaxed">
 
   <!-- HERO -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 gradient-hero">
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 gradient-bg">
     <img src="https://via.placeholder.com/150" alt="Saritha Ayyappan" class="avatar">
     <h1 class="text-5xl md:text-6xl font-bold mb-4">Saritha Ayyappan</h1>
-    <p class="text-lg md:text-xl max-w-2xl text-black font-semibold">
+    <p class="text-lg md:text-xl max-w-2xl">
       Lead Test Engineer with 17 years of experience in Automation, Strategic Testing, and Root Cause Analysis.
     </p>
     <div class="mt-6 space-x-4">
@@ -83,30 +51,30 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="py-20 gradient-from-about" data-aos="fade-up">
-    <div class="max-w-5xl mx-auto px-6 text-center hover-card">
-      <h2 class="text-3xl font-bold text-cyan-600 mb-4">About Me</h2>
-      <p class="hover-content text-cyan-900">
+  <section id="about" class="py-20" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-cyan-400 mb-4">About Me</h2>
+      <p>
         I am a Lead Test Engineer with 17 years of experience specializing in automation, root cause analysis, and strategic testing.
       </p>
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="py-20 gradient-from-about" data-aos="fade-up">
-    <div class="max-w-6xl mx-auto px-6 hover-card">
-      <h2 class="text-3xl font-bold text-center text-cyan-600 mb-10">Technical Acumen</h2>
-      <div class="grid md:grid-cols-3 gap-8 hover-content">
-        <div class="hover-card">
-          <h3 class="text-xl font-semibold text-cyan-600 mb-2">Automation & Testing</h3>
+  <section id="skills" class="py-20" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-cyan-400 mb-10">Technical Acumen</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-[#0f1a2b] p-6 rounded-xl shadow hover:shadow-cyan-400/30 transition">
+          <h3 class="text-xl font-semibold text-cyan-400 mb-2">Automation & Testing</h3>
           <p>UFT, Selenium, CI/CD, Functional, Regression, ETL Testing, API Testing</p>
         </div>
-        <div class="hover-card">
-          <h3 class="text-xl font-semibold text-cyan-600 mb-2">Tools & Technologies</h3>
+        <div class="bg-[#0f1a2b] p-6 rounded-xl shadow hover:shadow-cyan-400/30 transition">
+          <h3 class="text-xl font-semibold text-cyan-400 mb-2">Tools & Technologies</h3>
           <p>JIRA, ALM, RQM, Informatica, Control M, Autosys, Salesforce, MS Project</p>
         </div>
-        <div class="hover-card">
-          <h3 class="text-xl font-semibold text-cyan-600 mb-2">Programming & Databases</h3>
+        <div class="bg-[#0f1a2b] p-6 rounded-xl shadow hover:shadow-cyan-400/30 transition">
+          <h3 class="text-xl font-semibold text-cyan-400 mb-2">Programming & Databases</h3>
           <p>SQL, VBScript, Shell, Java, XML, HTML, Oracle, DB2, MySQL, SQL Server</p>
         </div>
       </div>
@@ -114,18 +82,65 @@
   </section>
 
   <!-- EXPERIENCE -->
-  <section id="experience" class="py-20 gradient-from-about" data-aos="fade-up">
-    <div class="max-w-6xl mx-auto px-6 hover-card">
-      <h2 class="text-3xl font-bold text-center text-cyan-600 mb-10">Professional Experience</h2>
-      <div class="hover-content text-cyan-900">
-        <p>Experience content will appear on hover.</p>
-      </div>
+  <section id="experience" class="py-20 bg-[#101b33]" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-cyan-400 mb-10">Professional Experience</h2>
+      <!-- Experience cards -->
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="py-20 gradient-from-about" data-aos="fade-up">
-    <div class="max-w-6xl mx-auto px-6 text-center hover-card">
-      <h2 class="text-3xl font-bold text-cyan-600 mb-10">Latest Projects</h2>
-      <div id="github-projects" class="grid md:grid-cols-2 gap-8 hover-content"></div>
-   
+  <section id="projects" class="py-20" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-cyan-400 mb-10">Latest Projects</h2>
+      <div id="github-projects" class="grid md:grid-cols-2 gap-8"></div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="py-20 bg-[#101b33]" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-cyan-400 mb-8">Certifications</h2>
+      <div class="flex justify-center space-x-4 flex-wrap">
+        <img src="https://img.icons8.com/color/48/000000/ISTQB.png" alt="ISTQB">
+        <img src="https://img.icons8.com/color/48/000000/CSM.png" alt="CSM">
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <footer class="py-10 text-center text-gray-400">
+    <p>📫 Reach me at <a href="mailto:saritha.c.ayyappan@gmail.com" class="text-cyan-400 hover:underline">saritha.c.ayyappan@gmail.com</a></p>
+    <p class="mt-2">
+      <a href="https://www.linkedin.com/in/saritha-ayyappan-9bb70810/" class="mx-2 hover:text-cyan-400">LinkedIn</a> |
+      <a href="https://github.com/sarithaca" class="mx-2 hover:text-cyan-400">GitHub</a>
+    </p>
+    <p class="mt-4 text-xs text-gray-500">© 2025 Saritha Ayyappan</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    AOS.init();
+
+    // GitHub Projects Dynamic Fetch
+    fetch('https://api.github.com/users/sarithaca/repos?sort=updated&per_page=4')
+      .then(res => res.json())
+      .then(repos => {
+        const container = document.getElementById('github-projects');
+        repos.forEach(repo => {
+          const card = document.createElement('div');
+          card.className = 'project-card';
+          card.innerHTML = `
+            <h3 class="text-xl font-semibold text-cyan-400 mb-2">
+              <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+            </h3>
+            <p class="text-gray-300">${repo.description || ''}</p>
+          `;
+          container.appendChild(card);
+        });
+      })
+      .catch(err => console.error('Error fetching GitHub repos:', err));
+  </script>
+
+</body>
+</html>
