@@ -1,95 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saritha Ayyappan | Lead Test Engineer</title>
 
   <!-- Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-  
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Custom Gradient -->
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #0b1221;
-      color: #d1d5db;
-      scroll-behavior: smooth;
-    }
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-    }
-    nav {
-      backdrop-filter: blur(10px);
-    }
-    .gradient-btn {
-      background: linear-gradient(135deg, #00bfae, #6b5b95);
-    }
-    .gradient-btn:hover {
-      opacity: 0.9;
+    .gradient-bg {
+      background: linear-gradient(135deg, #6b5b95, #00bfae);
     }
   </style>
 </head>
-
-<body>
-
-  <!-- NAVBAR -->
-  <nav class="fixed top-0 left-0 w-full z-50 bg-[#0b1221]/80 border-b border-gray-700">
-    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center py-3">
-      <h1 class="text-xl font-bold text-cyan-400">Saritha Ayyappan</h1>
-      <div class="space-x-6 text-gray-300 text-sm">
-        <a href="#about" class="hover:text-cyan-400">About</a>
-        <a href="#skills" class="hover:text-cyan-400">Skills</a>
-        <a href="#experience" class="hover:text-cyan-400">Experience</a>
-        <a href="#projects" class="hover:text-cyan-400">Projects</a>
-        <a href="#certifications" class="hover:text-cyan-400">Certifications</a>
-        <a href="#contact" class="hover:text-cyan-400">Contact</a>
-      </div>
-    </div>
-  </nav>
+<body class="bg-[#0b1221] text-gray-200 font-sans leading-relaxed">
 
   <!-- HERO -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 gradient-bg pt-20">
-    <img src="https://via.placeholder.com/160" alt="Saritha Ayyappan" class="w-40 h-40 rounded-full border-4 border-white mb-6">
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 gradient-bg">
+    <img src="https://via.placeholder.com/150" alt="Saritha Ayyappan" class="w-36 h-36 rounded-full mb-4 border-4 border-white">
     <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">Saritha Ayyappan</h1>
-    <p class="text-lg md:text-xl max-w-2xl text-gray-200 mb-6">Lead Test Engineer with 17 years of experience in Automation, Strategic Testing, and Root Cause Analysis.</p>
-    <div class="space-x-4">
-      <a href="#experience" class="gradient-btn text-white px-6 py-2 rounded-lg font-semibold transition">Experience</a>
-      <a href="Saritha.Ayyappan_Resume.pdf" download class="border border-white text-white px-6 py-2 rounded-lg hover:bg-white hover:text-black transition">Download Resume</a>
+    <p class="text-lg md:text-xl text-gray-200 max-w-2xl">
+      Lead Test Engineer with 17 years of experience in Automation, Strategic Testing, and Root Cause Analysis.
+      Passionate about ensuring quality through innovation, data-driven testing, and continuous improvement.
+    </p>
+    <div class="mt-6 space-x-4">
+      <a href="#experience" class="bg-white text-black px-6 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">Experience</a>
+      <a href="Saritha.Ayyappan_Resume.pdf" download class="border border-white px-6 py-2 rounded-lg hover:bg-white hover:text-black transition">Download Resume</a>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about" class="py-20 bg-[#101b33]" data-aos="fade-up">
     <div class="max-w-5xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold text-cyan-400 mb-8">About Me</h2>
-      <p class="text-gray-300 text-lg leading-relaxed">
-        I’m a seasoned QA professional with over 17 years of experience in automation, end-to-end testing, and process optimization.
-        My background spans across manual testing, API testing, and Salesforce QA, ensuring every release meets the highest standards of reliability.
+      <h2 class="text-3xl font-bold text-cyan-400 mb-4">About Me</h2>
+      <p class="text-gray-300 text-lg">
+        I am a Lead Test Engineer with 17 years of industry experience specializing in test automation, root cause analysis, and strategic testing. I’ve successfully led CMMI-5 certification projects and implemented CAPA methodologies to enhance process control and defect management. Known for strong leadership, collaboration, and the ability to ensure seamless, high-quality product delivery.
       </p>
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- TECHNICAL ACUMEN -->
   <section id="skills" class="py-20" data-aos="fade-up">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold text-cyan-400 mb-10">Technical Acumen</h2>
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-cyan-400 mb-10">Technical Acumen</h2>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-[#0f1a2b] p-6 rounded-xl shadow hover:shadow-cyan-400/30 transition">
-          <h3 class="text-xl font-semibold text-cyan-400 mb-3">Automation & Testing</h3>
-          <p>UFT, Selenium, CI/CD, Functional, Regression, API Testing (Postman, SOAP UI)</p>
+          <h3 class="text-xl font-semibold text-cyan-400 mb-2">Automation & Testing</h3>
+          <p>UFT, Selenium, CI/CD, Functional, Regression, ETL Testing, API Testing (SOAP UI, Postman, Parasoft)</p>
         </div>
         <div class="bg-[#0f1a2b] p-6 rounded-xl shadow hover:shadow-cyan-400/30 transition">
-          <h3 class="text-xl font-semibold text-cyan-400 mb-3">Tools & Platforms</h3>
-          <p>JIRA, ALM, Salesforce QA, Jenkins, Control M, Autosys</p>
+          <h3 class="text-xl font-semibold text-cyan-400 mb-2">Tools & Technologies</h3>
+          <p>JIRA, ALM, Rational Quality Manager, Informatica, Control M, Autosys, Salesforce (Winter '19), MS Project</p>
         </div>
         <div class="bg-[#0f1a2b] p-6 rounded-xl shadow hover:shadow-cyan-400/30 transition">
-          <h3 class="text-xl font-semibold text-cyan-400 mb-3">Languages & Databases</h3>
-          <p>SQL, VBScript, Shell, Java, Oracle, DB2, MySQL</p>
+          <h3 class="text-xl font-semibold text-cyan-400 mb-2">Programming & Databases</h3>
+          <p>SQL, VBScript, Shell, Java, XML, HTML, Oracle, DB2, MySQL, SQL Server</p>
         </div>
       </div>
     </div>
@@ -98,39 +69,52 @@
   <!-- EXPERIENCE -->
   <section id="experience" class="py-20 bg-[#101b33]" data-aos="fade-up">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center text-cyan-400 mb-12">Professional Experience</h2>
-      <div class="space-y-10">
-        <div class="bg-[#0f1a2b] p-6 rounded-lg shadow-md hover:shadow-cyan-500/30 transition">
-          <h3 class="text-2xl font-semibold text-white">Lead Test Engineer – XYZ Corp</h3>
-          <p class="text-cyan-400 mb-2">2018 – Present</p>
-          <p>Leading QA automation and manual testing initiatives across multiple enterprise applications including Salesforce and API validation.</p>
+      <h2 class="text-3xl font-bold text-center text-cyan-400 mb-10">Professional Experience</h2>
+      <!-- Add experience cards here like before -->
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="py-20" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-cyan-400 mb-10">Testimonials</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-[#0f1a2b] p-6 rounded-xl shadow hover:shadow-cyan-500/30 transition">
+          <p class="text-gray-300 italic">"Saritha's QA expertise ensured our project launched flawlessly. Highly recommended!"</p>
+          <p class="text-cyan-400 mt-2">- Colleague/Manager</p>
         </div>
-        <div class="bg-[#0f1a2b] p-6 rounded-lg shadow-md hover:shadow-cyan-500/30 transition">
-          <h3 class="text-2xl font-semibold text-white">Senior QA Analyst – ABC Systems</h3>
-          <p class="text-cyan-400 mb-2">2010 – 2018</p>
-          <p>Implemented CI/CD pipelines for automation, executed regression and database testing, and optimized defect management workflows.</p>
+        <div class="bg-[#0f1a2b] p-6 rounded-xl shadow hover:shadow-cyan-500/30 transition">
+          <p class="text-gray-300 italic">"Her automation skills saved us weeks of effort and improved process efficiency."</p>
+          <p class="text-cyan-400 mt-2">- Team Lead</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- GITHUB PROJECTS -->
+  <section id="projects" class="py-20" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-cyan-400 mb-10">Latest Projects</h2>
+      <div id="github-projects" class="grid md:grid-cols-2 gap-8"></div>
+    </div>
+  </section>
+
   <!-- CERTIFICATIONS -->
-  <section id="certifications" class="py-20" data-aos="fade-up">
+  <section id="certifications" class="py-20 bg-[#101b33]" data-aos="fade-up">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold text-cyan-400 mb-10">Certifications</h2>
-      <div class="flex justify-center gap-12 flex-wrap">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/ISTQB_logo.png" alt="ISTQB" class="h-14">
-        <img src="https://scrumalliance.org/scrum/media/ScrumAllianceMedia/Global/Images/CSM-Logo.png" alt="CSM" class="h-14">
+      <h2 class="text-3xl font-bold text-cyan-400 mb-8">Certifications</h2>
+      <div class="flex justify-center space-x-4 flex-wrap">
+        <img src="https://img.icons8.com/color/48/000000/ISTQB.png" alt="ISTQB">
+        <img src="https://img.icons8.com/color/48/000000/CSM.png" alt="CSM">
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <footer id="contact" class="py-12 bg-[#0b1221] text-center">
-    <h2 class="text-3xl font-bold text-cyan-400 mb-6">Let’s Connect</h2>
-    <p>📫 <a href="mailto:saritha.c.ayyappan@gmail.com" class="text-cyan-400 hover:underline">saritha.c.ayyappan@gmail.com</a></p>
-    <p class="mt-3">
-      <a href="https://linkedin.com/in/saritha-ayyappan-9bb70810" class="mx-2 hover:text-cyan-400">LinkedIn</a> |
+  <footer class="py-10 text-center text-gray-400">
+    <p>📫 Reach me at <a href="mailto:saritha.c.ayyappan@gmail.com" class="text-cyan-400 hover:underline">saritha.c.ayyappan@gmail.com</a></p>
+    <p class="mt-2">
+      <a href="https://www.linkedin.com/in/saritha-ayyappan-9bb70810/" class="mx-2 hover:text-cyan-400">LinkedIn</a> |
       <a href="https://github.com/sarithaca" class="mx-2 hover:text-cyan-400">GitHub</a>
     </p>
     <p class="mt-4 text-xs text-gray-500">© 2025 Saritha Ayyappan | QA Engineer Portfolio</p>
@@ -138,6 +122,20 @@
 
   <script>
     AOS.init();
+
+    // GitHub Projects
+    fetch('https://api.github.com/users/sarithaca/repos?sort=updated&per_page=4')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('github-projects');
+        data.forEach(repo => {
+          const div = document.createElement('div');
+          div.className = 'bg-[#0f1a2b] p-6 rounded-xl shadow hover:shadow-cyan-500/30 transition';
+          div.innerHTML = `<h3 class='text-xl font-semibold text-cyan-400 mb-2'><a href='${repo.html_url}' target='_blank'>${repo.name}</a></h3><p class='text-gray-300'>${repo.description || ''}</p>`;
+          container.appendChild(div);
+        });
+      });
   </script>
+
 </body>
 </html>
