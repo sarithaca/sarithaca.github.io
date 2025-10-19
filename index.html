@@ -19,8 +19,8 @@
     body {
       font-family: 'Text Me One', sans-serif;
       margin: 0;
-      /* Updated Cyan → Teal gradient */
-      background: linear-gradient(to bottom, #00ffff, #00cccc);
+      /* Dark Navy → Bright Blue Gradient */
+      background: linear-gradient(to bottom, #0b1221, #004dff, #00ffff);
       color: #e0e0e0;
       scroll-behavior: smooth;
     }
@@ -48,7 +48,7 @@
       height: 160px;
       border-radius: 50%;
       border: 3px solid rgba(255, 255, 255, 0.9);
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
     }
 
     /* Hover Reveal Content */
@@ -82,7 +82,8 @@
 
   <!-- HERO -->
   <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-b from-cyan-400/50 to-transparent"></div>
+    <!-- Glow overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-blue-800/60 to-transparent"></div>
     <img src="Official_Profile.jpeg" alt="Saritha Ayyappan" class="avatar relative z-10 mb-4">
     <h1 class="text-5xl md:text-6xl font-bold text-white relative z-10 mb-3">Saritha Ayyappan</h1>
     <p class="text-lg md:text-xl text-cyan-200 relative z-10 font-semibold">
@@ -184,13 +185,4 @@
             <h3 class="text-xl font-semibold text-cyan-300 mb-2">
               <a href="${repo.html_url}" target="_blank">${repo.name}</a>
             </h3>
-            <p class="text-white/80">${repo.description || ''}</p>
-          `;
-          container.appendChild(card);
-        });
-      })
-      .catch(err => console.error('Error fetching GitHub repos:', err));
-  </script>
-
-</body>
-</html>
+           
