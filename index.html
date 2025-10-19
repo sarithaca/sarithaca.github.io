@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saritha Ayyappan | Lead Test Engineer</title>
 
   <!-- Tailwind CSS -->
@@ -10,7 +10,7 @@
   <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- Google Fonts -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Text+Me+One&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -21,33 +21,20 @@
       margin: 0;
       background: linear-gradient(to bottom, #0b1221 0%, #004d99 50%, #3399ff 100%);
       color: #e0e0e0;
-      scroll-behavior: smooth;
     }
-    h1, h2, h3 { font-family: 'Poiret One', cursive; letter-spacing: 1px; }
-
-    /* Glassmorphism Cards */
-    .glass {
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(15px);
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      border-radius: 1.25rem;
-      padding: 2rem;
-      box-shadow: 0 8px 20px rgba(0, 255, 255, 0.1);
-      transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+    h1, h2, h3 {
+      font-family: 'Poiret One', cursive;
     }
 
-    .glass:hover {
-      transform: translateY(-8px) scale(1.03);
-      box-shadow: 0 15px 40px rgba(0, 255, 255, 0.3);
-      border: 2px solid rgba(0, 255, 255, 0.5);
+    /* Hero Gradient */
+    .gradient-hero {
+      background: linear-gradient(135deg, #004d4d, #00ffff);
     }
 
-    /* Section Titles with subtle glow */
-    .section-title {
-      background: linear-gradient(90deg, #00ffff, #66ccff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    /* Sections Gradient */
+    .gradient-cyan {
+      background: linear-gradient(to bottom, #004d4d, #00cccc);
+      transition: background 0.5s ease;
     }
 
     /* Avatar with glow */
@@ -60,18 +47,45 @@
       margin-bottom: 20px;
     }
 
+    /* Glassmorphism Card */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(15px);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 1.25rem;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0, 255, 255, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+      margin-bottom: 1rem;
+      cursor: pointer;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 15px 40px rgba(0, 255, 255, 0.3);
+      border: 2px solid rgba(0, 255, 255, 0.5);
+    }
+
     /* Hover content for cards */
     .hover-content {
       opacity: 0;
       max-height: 0;
       transition: opacity 0.5s ease, max-height 0.5s ease;
     }
-    .hover-card:hover .hover-content {
+    .glass-card:hover .hover-content {
       opacity: 1;
       max-height: 800px;
     }
 
-    /* Buttons */
+    /* Section title with subtle glow */
+    .section-title {
+      background: linear-gradient(90deg, #00ffff, #66ccff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    }
+
+    /* Buttons with pop effect */
     .btn {
       transition: all 0.3s ease;
     }
@@ -81,16 +95,17 @@
     }
 
     footer {
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0,0,0,0.4);
       backdrop-filter: blur(10px);
     }
+
   </style>
 </head>
 
 <body class="leading-relaxed">
 
   <!-- HERO -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 gradient-hero">
     <img src="Official_Profile.jpeg" alt="Saritha Ayyappan" class="avatar">
     <h1 class="text-6xl font-bold text-white mb-3">Saritha Ayyappan</h1>
     <p class="text-xl text-cyan-200 font-semibold mb-6">Lead Test Engineer</p>
@@ -102,10 +117,10 @@
 
   <!-- ABOUT -->
   <section id="about" class="py-20 flex justify-center">
-    <div class="glass hover-card max-w-4xl text-center">
+    <div class="glass-card max-w-5xl text-center">
       <h2 class="text-3xl font-bold section-title mb-4">About Me</h2>
       <p class="hover-content text-white/90">
-        I am a Lead Test Engineer with 17 years of experience specializing in automation, root cause analysis, and strategic testing. I focus on improving software quality, optimizing QA strategies, and mentoring teams towards excellence.
+        I am a Lead Test Engineer with 17 years of experience specializing in automation, root cause analysis, and strategic testing.
       </p>
     </div>
   </section>
@@ -113,15 +128,15 @@
   <!-- SKILLS -->
   <section id="skills" class="py-20">
     <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
-      <div class="glass hover-card">
+      <div class="glass-card">
         <h3 class="text-xl font-semibold text-cyan-300 mb-2">Automation & Testing</h3>
-         <p>UFT, Selenium, CI/CD, Functional, Regression, ETL Testing, E2E Testing, Database Testing, Salesforce Testing, API Testing</p>
+        <p>UFT, Selenium, CI/CD, Functional, Regression, ETL Testing, API Testing</p>
       </div>
-      <div class="glass hover-card">
+      <div class="glass-card">
         <h3 class="text-xl font-semibold text-cyan-300 mb-2">Tools & Technologies</h3>
-        <p>JIRA, ALM, RQM, Rational Clear Quest, Informatica, Control M, Autosys, Salesforce, MS Project, Selenium Web Driver/Grid, Eclipse, TestNG, Parasoft, Postman, SOAP UI, SQL Navigator, AQT, Oracle SQL Developer, XQMF, TOAD</p>
+        <p>JIRA, ALM, RQM, Informatica, Control M, Autosys, Salesforce, MS Project</p>
       </div>
-      <div class="glass hover-card">
+      <div class="glass-card">
         <h3 class="text-xl font-semibold text-cyan-300 mb-2">Programming & Databases</h3>
         <p>SQL, VBScript, Shell, Java, XML, HTML, Oracle, DB2, MySQL, SQL Server</p>
       </div>
@@ -130,17 +145,17 @@
 
   <!-- EXPERIENCE -->
   <section id="experience" class="py-20">
-    <div class="glass hover-card max-w-6xl mx-auto px-6 text-center">
+    <div class="glass-card max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl font-bold section-title mb-10">Professional Experience</h2>
       <div class="hover-content text-white/90">
-        <p>Experience details can be added here — summarize key achievements, roles, and impactful projects in concise points.</p>
+        <p>Experience content will appear on hover.</p>
       </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
   <section id="projects" class="py-20">
-    <div class="glass hover-card max-w-6xl mx-auto px-6 text-center">
+    <div class="glass-card max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl font-bold section-title mb-10">Latest Projects</h2>
       <div id="github-projects" class="grid md:grid-cols-2 gap-8 hover-content"></div>
     </div>
@@ -148,7 +163,7 @@
 
   <!-- CERTIFICATIONS -->
   <section id="certifications" class="py-20">
-    <div class="glass hover-card max-w-4xl mx-auto px-6 text-center">
+    <div class="glass-card max-w-4xl mx-auto px-6 text-center">
       <h2 class="text-3xl font-bold section-title mb-8">Certifications</h2>
       <div class="flex justify-center items-center space-x-8 flex-wrap hover-content">
         <img src="ISTQB.png" alt="ISTQB" class="h-16 w-16 object-contain">
@@ -157,7 +172,7 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- CONTACT -->
   <footer class="py-10 text-center text-white/80">
     <p>📫 Reach me at <a href="mailto:saritha.c.ayyappan@gmail.com" class="hover:underline text-cyan-300">saritha.c.ayyappan@gmail.com</a></p>
     <p class="mt-2">
@@ -179,7 +194,7 @@
         const container = document.getElementById('github-projects');
         repos.forEach(repo => {
           const card = document.createElement('div');
-          card.className = 'glass hover-card p-6';
+          card.className = 'glass-card p-6';
           card.innerHTML = `
             <h3 class="text-xl font-semibold text-cyan-300 mb-2">
               <a href="${repo.html_url}" target="_blank">${repo.name}</a>
