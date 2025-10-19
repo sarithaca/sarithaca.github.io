@@ -156,4 +156,40 @@
 
   <!-- FOOTER -->
   <footer class="py-10 text-center text-white/80">
-    <p>📫 Reach me at <a href="
+    <p>📫 Reach me at <a href="mailto:saritha.c.ayyappan@gmail.com" class="hover:underline text-cyan-300">saritha.c.ayyappan@gmail.com</a></p>
+    <p class="mt-2">
+      <a href="https://www.linkedin.com/in/saritha-ayyappan-9bb70810/" class="mx-2 hover:text-cyan-300">LinkedIn</a> |
+      <a href="https://github.com/sarithaca" class="mx-2 hover:text-cyan-300">GitHub</a>
+    </p>
+    <p class="mt-4 text-xs text-gray-400">
+      © <script>document.write(new Date().getFullYear())</script> Saritha Ayyappan
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    AOS.init();
+
+    // Fetch GitHub Projects
+    fetch('https://api.github.com/users/sarithaca/repos?sort=updated&per_page=4')
+      .then(res => res.json())
+      .then(repos => {
+        const container = document.getElementById('github-projects');
+        if (!container) return;
+        repos.forEach(repo => {
+          const card = document.createElement('div');
+          card.className = 'glass p-6';
+          card.innerHTML = `
+            <h3 class="text-xl font-semibold text-cyan-300 mb-2">
+              <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+            </h3>
+            <p class="text-white/80">${repo.description || ''}</p>
+          `;
+          container.appendChild(card);
+        });
+      })
+      .catch(err => console.error('Error fetching GitHub repos:', err));
+  </script>
+
+</body>
+</html>
