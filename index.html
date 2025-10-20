@@ -218,4 +218,23 @@
             </h3>
             <p class="text-white/80">${repo.description || ''}</p>
           `;
-         
+          container.appendChild(card);
+        });
+      })
+      .catch(err => console.error('Error fetching GitHub repos:', err));
+
+    // Enable click/tap reveal for mobile devices
+    if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
+      document.querySelectorAll(".hover-card").forEach(card => {
+        card.addEventListener("click", () => {
+          const content = card.querySelector(".hover-content");
+          if (content) {
+            content.classList.toggle("show");
+          }
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>
