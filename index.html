@@ -90,12 +90,25 @@
     footer {
       background: rgba(0, 0, 0, 0.4);
       backdrop-filter: blur(10px);
+      padding-top: 2rem;
+      padding-bottom: 2rem;
     }
 
-    /* Tap toggle visible */
+    /* Tap toggle visible for mobile */
     .hover-content.show {
       opacity: 1 !important;
       max-height: 800px !important;
+    }
+
+    /* Footer icons styling */
+    .footer-icons a {
+      margin: 0 1rem;
+      color: #00ffff;
+      transition: transform 0.3s, color 0.3s;
+    }
+    .footer-icons a:hover {
+      color: #66ccff;
+      transform: scale(1.2);
     }
   </style>
 </head>
@@ -174,36 +187,20 @@
   </section>
 
   <!-- FOOTER -->
-<footer class="py-12 text-center text-white/80 relative">
-  <div class="max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="1200">
-    <!-- Section Title -->
-    <h2 class="text-2xl font-bold section-title mb-4">📫 Reach Me At</h2>
-    <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-6 rounded-full"></div>
-
-    <!-- Contact Icons -->
-    <div class="flex justify-center space-x-10 text-3xl">
-      <!-- Email -->
-      <a href="mailto:saritha.c.ayyappan@gmail.com" class="hover:text-cyan-300 transition" title="Email">
-        <i class="fas fa-envelope"></i>
+  <footer class="text-center text-white/80">
+    <p class="mb-4">📫 Reach me at <a href="mailto:saritha.c.ayyappan@gmail.com" class="hover:underline text-cyan-300">saritha.c.ayyappan@gmail.com</a></p>
+    <div class="footer-icons flex justify-center mb-4">
+      <a href="https://www.linkedin.com/in/saritha-ayyappan-9bb70810/" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin fa-2x"></i>
       </a>
-
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/saritha-ayyappan-9bb70810/" target="_blank" class="hover:text-cyan-300 transition" title="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-
-      <!-- GitHub -->
-      <a href="https://github.com/sarithaca" target="_blank" class="hover:text-cyan-300 transition" title="GitHub">
-        <i class="fab fa-github"></i>
+      <a href="https://github.com/sarithaca" target="_blank" title="GitHub">
+        <i class="fab fa-github fa-2x"></i>
       </a>
     </div>
-
-    <!-- Copyright -->
-    <p class="mt-6 text-sm text-gray-400">
+    <p class="text-xs text-gray-400">
       © <script>document.write(new Date().getFullYear())</script> Saritha Ayyappan
     </p>
-  </div>
-</footer>
+  </footer>
 
   <script>
     AOS.init();
@@ -227,7 +224,7 @@
       })
       .catch(err => console.error('Error fetching GitHub repos:', err));
 
-    // 👇 Enable click/tap reveal for mobile
+    // Enable click/tap reveal on mobile
     if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
       document.querySelectorAll(".hover-card").forEach(card => {
         card.addEventListener("click", () => {
