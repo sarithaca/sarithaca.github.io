@@ -1,25 +1,237 @@
-<footer class="py-10 text-center text-white/80">
-  <p>📫 Reach me at 
-    <a href="mailto:saritha.c.ayyappan@gmail.com" class="hover:underline text-cyan-300">
-      saritha.c.ayyappan@gmail.com
-    </a>
-  </p>
-  <div class="flex justify-center mt-4 space-x-6">
-    <!-- LinkedIn Icon -->
-    <a href="https://www.linkedin.com/in/saritha-ayyappan-9bb70810/" target="_blank" title="LinkedIn" class="hover:scale-110 transition-transform">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="#0A66C2" viewBox="0 0 24 24" width="36" height="36">
-        <path d="M19 0h-14c-2.761 0-5 2.238-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.762-2.238-5-5-5zm-11.75 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.783-1.75-1.75s.784-1.75 1.75-1.75 1.75.783 1.75 1.75-.784 1.75-1.75 1.75zm13.25 11.268h-3v-5.5c0-1.379-1.121-2.5-2.5-2.5s-2.5 1.121-2.5 2.5v5.5h-3v-10h3v1.43c.883-1.225 2.576-1.43 3.75-.065 1.174 1.365 1 3.365 1 3.365v5.27z"/>
-      </svg>
-    </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saritha Ayyappan | Lead Test Engineer</title>
 
-    <!-- GitHub Icon -->
-    <a href="https://github.com/sarithaca" target="_blank" title="GitHub" class="hover:scale-110 transition-transform">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" width="36" height="36">
-        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.089-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.303-5.467-1.335-5.467-5.932 0-1.31.469-2.381 1.236-3.221-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.655 1.653.243 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.807 5.625-5.479 5.921.43.372.814 1.102.814 2.222 0 1.604-.014 2.896-.014 3.286 0 .322.216.694.825.576 4.765-1.589 8.2-6.084 8.2-11.386 0-6.627-5.373-12-12-12z"/>
-      </svg>
-    </a>
-  </div>
-  <p class="mt-4 text-xs text-gray-400">
-    © <script>document.write(new Date().getFullYear())</script> Saritha Ayyappan
-  </p>
-</footer>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Text+Me+One&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Text Me One', sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom, #0b1221 0%, #003366 50%, #007bff 100%);
+      color: #e0e0e0;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poiret One', cursive;
+      letter-spacing: 1px;
+    }
+
+    /* Glassmorphism Cards */
+    .glass {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(15px);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 1.25rem;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0, 255, 255, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+    }
+
+    .glass:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 15px 40px rgba(0, 255, 255, 0.3);
+      border: 2px solid rgba(0, 255, 255, 0.5);
+    }
+
+    /* Section Titles with glow */
+    .section-title {
+      background: linear-gradient(90deg, #00ffff, #66ccff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    }
+
+    /* Avatar */
+    .avatar {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 3px solid rgba(255,255,255,0.8);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+      margin-bottom: 20px;
+    }
+
+    /* Hover/tap content */
+    .hover-content {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.5s ease, max-height 0.5s ease;
+    }
+
+    .hover-card:hover .hover-content {
+      opacity: 1;
+      max-height: 800px;
+    }
+
+    /* Buttons */
+    .btn {
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4);
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    /* Tap toggle visible */
+    .hover-content.show {
+      opacity: 1 !important;
+      max-height: 800px !important;
+    }
+  </style>
+</head>
+
+<body class="leading-relaxed">
+
+  <!-- HERO -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+    <img src="Saritha_Official.jpg" alt="Saritha Ayyappan" class="avatar">
+    <h1 class="text-6xl font-bold text-white mb-3">Saritha Ayyappan</h1>
+    <p class="text-xl text-cyan-200 font-semibold mb-6">Lead Test Engineer</p>
+    <div class="space-x-4">
+      <a href="#experience" class="btn bg-white text-black px-6 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">Experience</a>
+      <a href="Saritha.Ayyappan_Resume.pdf" download class="btn border border-white px-6 py-2 rounded-lg text-white hover:bg-white hover:text-black transition">Download Resume</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20 flex justify-center">
+    <div class="glass hover-card max-w-4xl text-center">
+      <h2 class="text-3xl font-bold section-title mb-4">About Me</h2>
+      <p class="hover-content text-white/90">
+        I am a Lead Test Engineer with 17 years of experience specializing in automation, root cause analysis, and strategic testing. I focus on improving software quality, optimizing QA strategies, and mentoring teams towards excellence.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-20">
+    <div class="glass hover-card max-w-6xl mx-auto px-6 text-center p-10">
+      <h2 class="text-3xl font-bold section-title mb-10">Technical Acumen</h2>
+      <div class="grid md:grid-cols-3 gap-8 hover-content">
+        <div class="glass p-6">
+          <h3 class="text-xl font-semibold text-cyan-300 mb-2">Automation & Testing</h3>
+          <p>UFT, Selenium, CI/CD, Functional, Regression, ETL Testing, E2E Testing, Database Testing, Salesforce Testing, API Testing</p>
+        </div>
+        <div class="glass p-6">
+          <h3 class="text-xl font-semibold text-cyan-300 mb-2">Tools & Technologies</h3>
+          <p>JIRA, ALM, RQM, Rational Clear Quest, Informatica, Control M, Autosys, Salesforce, MS Project, Selenium Web Driver/Grid, Eclipse, TestNG, Parasoft, Postman, SOAP UI, SQL Navigator, AQT, Oracle SQL Developer, XQMF, TOAD</p>
+        </div>
+        <div class="glass p-6">
+          <h3 class="text-xl font-semibold text-cyan-300 mb-2">Programming & Databases</h3>
+          <p>SQL, VBScript, Shell, Java, XML, HTML, Oracle, DB2, MySQL, SQL Server</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="py-20">
+    <div class="glass hover-card max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold section-title mb-10">Professional Experience</h2>
+      <div class="hover-content text-white/90">
+        <p>Experience details can be added here — summarize key achievements, roles, and impactful projects in concise points.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-20">
+    <div class="glass hover-card max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold section-title mb-10">Latest Projects</h2>
+      <div id="github-projects" class="grid md:grid-cols-2 gap-8 hover-content"></div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="py-20">
+    <div class="glass hover-card max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold section-title mb-8">Certifications</h2>
+      <div class="flex justify-center items-center space-x-8 flex-wrap hover-content">
+        <img src="ISTQB.png" alt="ISTQB" class="h-16 w-16 object-contain">
+        <img src="CSM.png" alt="CSM" class="h-16 w-16 object-contain">
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 text-center text-white/80">
+    <p>📫 Reach me at 
+      <a href="mailto:saritha.c.ayyappan@gmail.com" class="hover:underline text-cyan-300">
+        saritha.c.ayyappan@gmail.com
+      </a>
+    </p>
+    <div class="flex justify-center mt-4 space-x-6">
+      <!-- LinkedIn Icon -->
+      <a href="https://www.linkedin.com/in/saritha-ayyappan-9bb70810/" target="_blank" title="LinkedIn" class="hover:scale-110 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#0A66C2" viewBox="0 0 24 24" width="36" height="36">
+          <path d="M19 0h-14c-2.761 0-5 2.238-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.762-2.238-5-5-5zm-11.75 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.783-1.75-1.75s.784-1.75 1.75-1.75 1.75.783 1.75 1.75-.784 1.75-1.75 1.75zm13.25 11.268h-3v-5.5c0-1.379-1.121-2.5-2.5-2.5s-2.5 1.121-2.5 2.5v5.5h-3v-10h3v1.43c.883-1.225 2.576-1.43 3.75-.065 1.174 1.365 1 3.365 1 3.365v5.27z"/>
+        </svg>
+      </a>
+
+      <!-- GitHub Icon -->
+      <a href="https://github.com/sarithaca" target="_blank" title="GitHub" class="hover:scale-110 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" width="36" height="36">
+          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.089-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.303-5.467-1.335-5.467-5.932 0-1.31.469-2.381 1.236-3.221-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.655 1.653.243 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.807 5.625-5.479 5.921.43.372.814 1.102.814 2.222 0 1.604-.014 2.896-.014 3.286 0 .322.216.694.825.576 4.765-1.589 8.2-6.084 8.2-11.386 0-6.627-5.373-12-12-12z"/>
+        </svg>
+      </a>
+    </div>
+    <p class="mt-4 text-xs text-gray-400">
+      © <script>document.write(new Date().getFullYear())</script> Saritha Ayyappan
+    </p>
+  </footer>
+
+  <script>
+    AOS.init();
+
+    // GitHub Projects Dynamic Fetch
+    fetch('https://api.github.com/users/sarithaca/repos?sort=updated&per_page=4')
+      .then(res => res.json())
+      .then(repos => {
+        const container = document.getElementById('github-projects');
+        repos.forEach(repo => {
+          const card = document.createElement('div');
+          card.className = 'glass hover-card p-6';
+          card.innerHTML = `
+            <h3 class="text-xl font-semibold text-cyan-300 mb-2">
+              <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+            </h3>
+            <p class="text-white/80">${repo.description || ''}</p>
+          `;
+          container.appendChild(card);
+        });
+      })
+      .catch(err => console.error('Error fetching GitHub repos:', err));
+
+    // 👇 Enable click/tap reveal for mobile
+    if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
+      document.querySelectorAll(".hover-card").forEach(card => {
+        card.addEventListener("click", () => {
+          const content = card.querySelector(".hover-content");
+          if (content) {
+            content.classList.toggle("show");
+          }
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>
