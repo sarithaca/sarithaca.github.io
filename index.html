@@ -181,30 +181,34 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-10 flex flex-col items-center text-center">
+<footer class="py-10 flex flex-col items-center text-center text-white">
+  
+  <!-- Glassy Email Pill -->
+  <div id="email-pill" 
+       class="inline-flex items-center justify-center px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-md transition-all mx-auto mb-6 cursor-pointer">
+    <span class="text-cyan-400 text-lg mr-2">📫</span>
+    <a href="mailto:saritha.c.ayyappan@gmail.com" 
+       class="text-white font-semibold hover:text-cyan-300 transition-colors">
+      saritha.c.ayyappan@gmail.com
+    </a>
+  </div>
 
-    <!-- Glassy Email Pill -->
-    <div id="email-pill" class="inline-flex items-center justify-center px-6 py-3 mx-auto mb-6">
-      <span class="text-cyan-400 text-lg mr-2">📫</span>
-      <a href="mailto:saritha.c.ayyappan@gmail.com" class="text-white font-semibold hover:text-cyan-300 transition-colors">
-        saritha.c.ayyappan@gmail.com
-      </a>
-    </div>
+  <!-- Social Icons -->
+  <div class="flex justify-center space-x-10">
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/saritha-ayyappan-9bb70810/" target="_blank" title="LinkedIn"
+       class="transition-transform transform hover:scale-125">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" 
+           alt="LinkedIn" width="48" height="48" class="rounded-lg">
+    </a>
 
-    <!-- Social Icons -->
-    <div class="flex justify-center space-x-8">
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/saritha-ayyappan-9bb70810/" target="_blank" title="LinkedIn" class="social-icon transition-transform hover:scale-125">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" 
-             alt="LinkedIn" width="48" height="48" style="fill:#0077B5;">
-      </a>
-
-      <!-- GitHub Invertocat -->
-      <a href="https://github.com/sarithaca" target="_blank" title="GitHub" class="social-icon transition-transform hover:scale-125">
-        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" 
-             alt="GitHub" width="48" height="48">
-      </a>
-    </div>
+    <!-- GitHub -->
+    <a href="https://github.com/sarithaca" target="_blank" title="GitHub"
+       class="transition-transform transform hover:scale-125">
+      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" 
+           alt="GitHub" width="48" height="48" class="rounded-lg bg-white p-1">
+    </a>
+  </div>
 
     <p class="mt-6 text-xs text-gray-300">
       © <script>document.write(new Date().getFullYear())</script> Saritha Ayyappan
