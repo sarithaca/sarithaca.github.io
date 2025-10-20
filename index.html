@@ -98,7 +98,7 @@
       max-height: 800px !important;
     }
 
-    /* Footer icons hover effect */
+    /* Footer social icons hover effect */
     .social-icon:hover {
       transform: scale(1.15);
     }
@@ -184,55 +184,4 @@
 
     <div class="flex justify-center mt-4 space-x-6">
       <!-- LinkedIn Icon (Official Blue) -->
-      <a href="https://www.linkedin.com/in/saritha-ayyappan-9bb70810/" target="_blank" title="LinkedIn" class="social-icon transition-transform">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" width="36" height="36" style="filter: drop-shadow(0 0 4px #00ffff);">
-      </a>
-
-      <!-- GitHub Icon (Official Black) -->
-      <a href="https://github.com/sarithaca" target="_blank" title="GitHub" class="social-icon transition-transform">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="36" height="36" style="filter: drop-shadow(0 0 4px #00ffff);">
-      </a>
-    </div>
-
-    <p class="mt-4 text-xs text-gray-400">
-      © <script>document.write(new Date().getFullYear())</script> Saritha Ayyappan
-    </p>
-  </footer>
-
-  <script>
-    AOS.init();
-
-    // GitHub Projects Dynamic Fetch
-    fetch('https://api.github.com/users/sarithaca/repos?sort=updated&per_page=4')
-      .then(res => res.json())
-      .then(repos => {
-        const container = document.getElementById('github-projects');
-        repos.forEach(repo => {
-          const card = document.createElement('div');
-          card.className = 'glass hover-card p-6';
-          card.innerHTML = `
-            <h3 class="text-xl font-semibold text-cyan-300 mb-2">
-              <a href="${repo.html_url}" target="_blank">${repo.name}</a>
-            </h3>
-            <p class="text-white/80">${repo.description || ''}</p>
-          `;
-          container.appendChild(card);
-        });
-      })
-      .catch(err => console.error('Error fetching GitHub repos:', err));
-
-    // Enable click/tap reveal for mobile
-    if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
-      document.querySelectorAll(".hover-card").forEach(card => {
-        card.addEventListener("click", () => {
-          const content = card.querySelector(".hover-content");
-          if (content) {
-            content.classList.toggle("show");
-          }
-        });
-      });
-    }
-  </script>
-
-</body>
-</html>
+      <a href="https://www.linkedin.com/in/sar
