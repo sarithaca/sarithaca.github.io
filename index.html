@@ -27,7 +27,7 @@
       letter-spacing: 1px;
     }
 
-    /* Glassmorphism Cards */
+    /* Glassmorphism Card */
     .glass {
       background: rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(15px);
@@ -44,7 +44,6 @@
       border: 2px solid rgba(0, 255, 255, 0.5);
     }
 
-    /* Section Titles with glow */
     .section-title {
       background: linear-gradient(90deg, #00ffff, #66ccff);
       -webkit-background-clip: text;
@@ -52,7 +51,6 @@
       text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
     }
 
-    /* Avatar */
     .avatar {
       width: 180px;
       height: 180px;
@@ -62,7 +60,6 @@
       margin-bottom: 20px;
     }
 
-    /* Hover/tap content */
     .hover-content {
       opacity: 0;
       max-height: 0;
@@ -75,30 +72,37 @@
       max-height: 800px;
     }
 
-    /* Buttons */
-    .btn {
-      transition: all 0.3s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4);
-    }
-
     footer {
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.4);
       backdrop-filter: blur(10px);
     }
 
-    /* Tap toggle visible */
     .hover-content.show {
       opacity: 1 !important;
       max-height: 800px !important;
     }
 
-    /* Footer icons hover effect */
+    /* Social icon hover */
     .social-icon:hover {
       transform: scale(1.15);
+    }
+
+    /* Glassy email pill */
+    #email-pill {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(15px);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 9999px;
+      box-shadow: 0 8px 20px rgba(0, 255, 255, 0.1);
+      transition: all 0.35s ease;
+      cursor: pointer;
+    }
+
+    #email-pill:hover,
+    #email-pill.active {
+      transform: scale(1.08);
+      box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+      border-color: rgba(0, 255, 255, 0.5);
     }
   </style>
 </head>
@@ -111,8 +115,8 @@
     <h1 class="text-6xl font-bold text-white mb-3">Saritha Ayyappan</h1>
     <p class="text-xl text-cyan-200 font-semibold mb-6">Lead Test Engineer</p>
     <div class="space-x-4">
-      <a href="#experience" class="btn bg-white text-black px-6 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">Experience</a>
-      <a href="Saritha.Ayyappan_Resume.pdf" download class="btn border border-white px-6 py-2 rounded-lg text-white hover:bg-white hover:text-black transition">Download Resume</a>
+      <a href="#experience" class="bg-white text-black px-6 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">Experience</a>
+      <a href="Saritha.Ayyappan_Resume.pdf" download class="border border-white px-6 py-2 rounded-lg text-white hover:bg-white hover:text-black transition">Download Resume</a>
     </div>
   </section>
 
@@ -177,34 +181,36 @@
   </section>
 
   <!-- FOOTER -->
-<footer class="py-10 text-center text-white/80">
-  <a href="mailto:saritha.c.ayyappan@gmail.com"
-     class="glass-pill flex items-center px-6 py-3 rounded-full font-semibold text-white/90 text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-white/10">
-    📫 saritha.c.ayyappan@gmail.com
-  </a>
-    
+  <footer class="py-10 flex flex-col items-center text-center">
 
-  <div class="flex justify-center mt-4 space-x-6">
-    <!-- LinkedIn Icon (Official Blue) -->
-    <a href="https://www.linkedin.com/in/saritha-ayyappan-9bb70810/" target="_blank" class="social-icon transition-transform hover:scale-110">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="36" height="36" fill="#0077B5" class="hover-glow">
-        <path d="M100.28 448H7.4V148.9h92.88zm-46.44-340C24 108 0 83.6 0 53.9 0 24 24 0 53.84 0s53.84 24 53.84 53.84c0 29.7-24 54-53.84 54zM447.9 448h-92.68V302.4c0-34.7-12.4-58.4-43.32-58.4-23.62 0-37.64 15.8-43.78 31.1-2.25 5.5-2.82 13.1-2.82 20.8V448h-92.76s1.22-241.6 0-266.1h92.76v37.7c12.3-19 34.3-46 83.32-46 60.8 0 106.4 39.7 106.4 124.7V448z"/>
-      </svg>
-    </a>
+    <!-- Glassy Email Pill -->
+    <div id="email-pill" class="inline-flex items-center justify-center px-6 py-3 mx-auto mb-6">
+      <span class="text-cyan-400 text-lg mr-2">📫</span>
+      <a href="mailto:saritha.c.ayyappan@gmail.com" class="text-white font-semibold hover:text-cyan-300 transition-colors">
+        saritha.c.ayyappan@gmail.com
+      </a>
+    </div>
 
-    <!-- GitHub Invertocat Icon -->
-    <a href="https://github.com/sarithaca" target="_blank" class="social-icon transition-transform hover:scale-110">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="36" height="36" class="hover-glow">
-        <circle cx="8" cy="8" r="8" fill="white"/>
-        <path fill="black" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-      </svg>
-    </a>
-  </div>
+    <!-- Social Icons -->
+    <div class="flex justify-center space-x-8">
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/saritha-ayyappan-9bb70810/" target="_blank" title="LinkedIn" class="social-icon transition-transform hover:scale-125">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" 
+             alt="LinkedIn" width="48" height="48" style="fill:#0077B5;">
+      </a>
 
-  <p class="mt-4 text-xs text-gray-400">
-    © <script>document.write(new Date().getFullYear())</script> Saritha Ayyappan
-  </p>
-</footer>
+      <!-- GitHub Invertocat -->
+      <a href="https://github.com/sarithaca" target="_blank" title="GitHub" class="social-icon transition-transform hover:scale-125">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" 
+             alt="GitHub" width="48" height="48">
+      </a>
+    </div>
+
+    <p class="mt-6 text-xs text-gray-300">
+      © <script>document.write(new Date().getFullYear())</script> Saritha Ayyappan
+    </p>
+  </footer>
+
   <script>
     AOS.init();
 
@@ -227,15 +233,22 @@
       })
       .catch(err => console.error('Error fetching GitHub repos:', err));
 
-    // Enable click/tap reveal for mobile devices
+    // Enable click/tap reveal for mobile hover-cards
     if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
       document.querySelectorAll(".hover-card").forEach(card => {
         card.addEventListener("click", () => {
           const content = card.querySelector(".hover-content");
-          if (content) {
-            content.classList.toggle("show");
-          }
+          if (content) content.classList.toggle("show");
         });
+      });
+    }
+
+    // Enable tap pop effect for email pill
+    const emailPill = document.getElementById('email-pill');
+    if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
+      emailPill.addEventListener('click', () => {
+        emailPill.classList.add('active');
+        setTimeout(() => emailPill.classList.remove('active'), 400);
       });
     }
   </script>
