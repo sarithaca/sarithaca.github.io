@@ -1,187 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Saritha Ayyappan | Lead Test Engineer</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Saritha Ayyappan | Lead Test Engineer</title>
 
-  <!-- Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <!-- AOS Animations -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Text+Me+One&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- Tailwind CSS -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<!-- AOS Animations -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Text+Me+One&display=swap" rel="stylesheet">
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-  <style>
-    body {
-      font-family: 'Text Me One', sans-serif;
-      margin: 0;
-      background: linear-gradient(to bottom, #0b1221 0%, #003366 50%, #007bff 100%);
-      color: #e0e0e0;
-      scroll-behavior: smooth;
-    }
+<style>
+body {
+  font-family: 'Text Me One', sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, #0b1221 0%, #003366 50%, #007bff 100%);
+  color: #e0e0e0;
+  scroll-behavior: smooth;
+}
 
-    h1, h2, h3 {
-      font-family: 'Poiret One', cursive;
-      letter-spacing: 1px;
-    }
+h1, h2, h3 {
+  font-family: 'Poiret One', cursive;
+  letter-spacing: 1px;
+}
 
-    /* Glassmorphism Cards */
-    .glass {
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(15px);
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      border-radius: 1.25rem;
-      padding: 2rem;
-      box-shadow: 0 8px 20px rgba(0, 255, 255, 0.1);
-      transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
-    }
+/* Glassmorphism Cards */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+}
 
-    .glass:hover {
-      transform: translateY(-8px) scale(1.03);
-      box-shadow: 0 15px 40px rgba(0, 255, 255, 0.3);
-      border: 2px solid rgba(0, 255, 255, 0.5);
-    }
+.glass:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 255, 255, 0.3);
+  border: 2px solid rgba(0, 255, 255, 0.5);
+}
 
-    /* Section Titles with glow */
-    .section-title {
-      background: linear-gradient(90deg, #00ffff, #66ccff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
-    }
+/* Section Titles with glow */
+.section-title {
+  background: linear-gradient(90deg, #00ffff, #66ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
 
-    /* Avatar */
-    .avatar {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      border: 3px solid rgba(255,255,255,0.8);
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
-      margin-bottom: 20px;
-    }
+/* Avatar */
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.8);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+  margin-bottom: 20px;
+}
 
-    /* Hover/tap content */
-    .hover-content {
-      opacity: 0;
-      max-height: 0;
-      overflow: hidden;
-      transition: opacity 0.5s ease, max-height 0.5s ease;
-    }
+/* Hover/tap content */
+.hover-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
 
-    .hover-card:hover .hover-content {
-      opacity: 1;
-      max-height: 800px;
-    }
+.hover-card:hover .hover-content {
+  opacity: 1;
+  max-height: 800px;
+}
 
-    /* Buttons */
-    .btn {
-      transition: all 0.3s ease;
-    }
+/* Buttons */
+.btn {
+  transition: all 0.3s ease;
+}
 
-    .btn:hover {
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4);
-    }
+.btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4);
+}
 
-    footer {
-      background: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(10px);
-    }
+footer {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
 
-    /* Tap toggle visible */
-    .hover-content.show {
-      opacity: 1 !important;
-      max-height: 800px !important;
-    }
+/* Tap toggle visible */
+.hover-content.show {
+  opacity: 1 !important;
+  max-height: 800px !important;
+}
 
-    /* Footer social icons hover effect */
-    .social-icon:hover {
-      transform: scale(1.15);
-    }
-  </style>
+/* Footer social icons hover effect */
+.social-icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+.social-icon:hover {
+  transform: scale(1.15);
+}
+</style>
 </head>
 
 <body class="leading-relaxed">
 
-  <!-- HERO -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-    <img src="Saritha_Official.jpg" alt="Saritha Ayyappan" class="avatar">
-    <h1 class="text-6xl font-bold text-white mb-3">Saritha Ayyappan</h1>
-    <p class="text-xl text-cyan-200 font-semibold mb-6">Lead Test Engineer</p>
-    <div class="space-x-4">
-      <a href="#experience" class="btn bg-white text-black px-6 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">Experience</a>
-      <a href="Saritha.Ayyappan_Resume.pdf" download class="btn border border-white px-6 py-2 rounded-lg text-white hover:bg-white hover:text-black transition">Download Resume</a>
-    </div>
-  </section>
+<!-- HERO -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+  <img src="Saritha_Official.jpg" alt="Saritha Ayyappan" class="avatar">
+  <h1 class="text-6xl font-bold text-white mb-3">Saritha Ayyappan</h1>
+  <p class="text-xl text-cyan-200 font-semibold mb-6">Lead Test Engineer</p>
+  <div class="space-x-4">
+    <a href="#experience" class="btn bg-white text-black px-6 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">Experience</a>
+    <a href="Saritha.Ayyappan_Resume.pdf" download class="btn border border-white px-6 py-2 rounded-lg text-white hover:bg-white hover:text-black transition">Download Resume</a>
+  </div>
+</section>
 
-  <!-- ABOUT -->
-  <section id="about" class="py-20 flex justify-center">
-    <div class="glass hover-card max-w-4xl text-center">
-      <h2 class="text-3xl font-bold section-title mb-4">About Me</h2>
-      <p class="hover-content text-white/90">
-        I am a Lead Test Engineer with 17 years of experience specializing in automation, root cause analysis, and strategic testing. I focus on improving software quality, optimizing QA strategies, and mentoring teams towards excellence.
-      </p>
-    </div>
-  </section>
+<!-- Add your other sections (About, Skills, Experience, Projects, Certifications) here -->
 
-  <!-- SKILLS -->
-  <section id="skills" class="py-20">
-    <div class="glass hover-card max-w-6xl mx-auto px-6 text-center p-10">
-      <h2 class="text-3xl font-bold section-title mb-10">Technical Acumen</h2>
-      <div class="grid md:grid-cols-3 gap-8 hover-content">
-        <div class="glass p-6">
-          <h3 class="text-xl font-semibold text-cyan-300 mb-2">Automation & Testing</h3>
-          <p>UFT, Selenium, CI/CD, Functional, Regression, ETL Testing, E2E Testing, Database Testing, Salesforce Testing, API Testing</p>
-        </div>
-        <div class="glass p-6">
-          <h3 class="text-xl font-semibold text-cyan-300 mb-2">Tools & Technologies</h3>
-          <p>JIRA, ALM, RQM, Rational Clear Quest, Informatica, Control M, Autosys, Salesforce, MS Project, Selenium Web Driver/Grid, Eclipse, TestNG, Parasoft, Postman, SOAP UI, SQL Navigator, AQT, Oracle SQL Developer, XQMF, TOAD</p>
-        </div>
-        <div class="glass p-6">
-          <h3 class="text-xl font-semibold text-cyan-300 mb-2">Programming & Databases</h3>
-          <p>SQL, VBScript, Shell, Java, XML, HTML, Oracle, DB2, MySQL, SQL Server</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- FOOTER -->
+<footer class="py-10 text-center text-white/80">
+  <p>📫 Reach me at 
+    <a href="mailto:saritha.c.ayyappan@gmail.com" class="hover:underline text-cyan-300">saritha.c.ayyappan@gmail.com</a>
+  </p>
 
-  <!-- EXPERIENCE -->
-  <section id="experience" class="py-20">
-    <div class="glass hover-card max-w-6xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold section-title mb-10">Professional Experience</h2>
-      <div class="hover-content text-white/90">
-        <p>Experience details can be added here — summarize key achievements, roles, and impactful projects in concise points.</p>
-      </div>
-    </div>
-  </section>
+  <div class="flex justify-center mt-4 space-x-6">
+    <!-- LinkedIn Icon -->
+    <a href="https://www.linkedin.com/in/saritha-ayyappan-9bb70810/" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="social-icon" style="fill:#0A66C2;">
+    </a>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="py-20">
-    <div class="glass hover-card max-w-6xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold section-title mb-10">Latest Projects</h2>
-      <div id="github-projects" class="grid md:grid-cols-2 gap-8 hover-content"></div>
-    </div>
-  </section>
+    <!-- GitHub Icon -->
+    <a href="https://github.com/sarithaca" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="social-icon" style="fill:#181717;">
+    </a>
+  </div>
 
-  <!-- CERTIFICATIONS -->
-  <section id="certifications" class="py-20">
-    <div class="glass hover-card max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold section-title mb-8">Certifications</h2>
-      <div class="flex justify-center items-center space-x-8 flex-wrap hover-content">
-        <img src="ISTQB.png" alt="ISTQB" class="h-16 w-16 object-contain">
-        <img src="CSM.png" alt="CSM" class="h-16 w-16 object-contain">
-      </div>
-    </div>
-  </section>
+  <p class="mt-4 text-xs text-gray-400">
+    © <script>document.write(new Date().getFullYear())</script> Saritha Ayyappan
+  </p>
+</footer>
 
-  <!-- FOOTER -->
-  <footer class="py-10 text-center text-white/80">
-    <p>📫 Reach me at <a href="mailto:saritha.c.ayyappan@gmail.com" class="hover:underline text-cyan-300">saritha.c.ayyappan@gmail.com</a></p>
+<script>
+  AOS.init();
 
-    <div class="flex justify-center mt-4 space-x-6">
-      <!-- LinkedIn Icon (Official Blue) -->
-      <a href="https://www.linkedin.com/in/sar
+  // Enable click/tap reveal for mobile
+  if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
+    document.querySelectorAll(".hover-card").forEach(card => {
+      card.addEventListener("click", () => {
+        const content = card.querySelector(".hover-content");
+        if (content) content.classList.toggle("show");
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
