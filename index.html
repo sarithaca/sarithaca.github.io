@@ -19,11 +19,15 @@
     body {
       font-family: 'Text Me One', sans-serif;
       margin: 0;
-      background: linear-gradient(to bottom, #0b1221 0%, #004d99 50%, #3399ff 100%);
+      background: linear-gradient(to bottom, #0b1221 0%, #003366 50%, #007bff 100%);
       color: #e0e0e0;
       scroll-behavior: smooth;
     }
-    h1, h2, h3 { font-family: 'Poiret One', cursive; letter-spacing: 1px; }
+
+    h1, h2, h3 {
+      font-family: 'Poiret One', cursive;
+      letter-spacing: 1px;
+    }
 
     /* Glassmorphism Cards */
     .glass {
@@ -42,7 +46,7 @@
       border: 2px solid rgba(0, 255, 255, 0.5);
     }
 
-    /* Section Titles with subtle glow */
+    /* Section Titles with glow */
     .section-title {
       background: linear-gradient(90deg, #00ffff, #66ccff);
       -webkit-background-clip: text;
@@ -50,7 +54,7 @@
       text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
     }
 
-    /* Avatar with glow */
+    /* Avatar */
     .avatar {
       width: 180px;
       height: 180px;
@@ -60,12 +64,14 @@
       margin-bottom: 20px;
     }
 
-    /* Hover content for cards */
+    /* Hover/tap content */
     .hover-content {
       opacity: 0;
       max-height: 0;
+      overflow: hidden;
       transition: opacity 0.5s ease, max-height 0.5s ease;
     }
+
     .hover-card:hover .hover-content {
       opacity: 1;
       max-height: 800px;
@@ -75,6 +81,7 @@
     .btn {
       transition: all 0.3s ease;
     }
+
     .btn:hover {
       transform: translateY(-3px) scale(1.05);
       box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4);
@@ -83,6 +90,12 @@
     footer {
       background: rgba(0, 0, 0, 0.4);
       backdrop-filter: blur(10px);
+    }
+
+    /* Tap toggle visible */
+    .hover-content.show {
+      opacity: 1 !important;
+      max-height: 800px !important;
     }
   </style>
 </head>
@@ -111,28 +124,25 @@
   </section>
 
   <!-- SKILLS -->
- <section id="skills" class="py-20">
-  <div class="glass hover-card max-w-6xl mx-auto px-6 text-center p-10">
-    <h2 class="text-3xl font-bold section-title mb-10">Technical Acumen</h2>
-    <div class="grid md:grid-cols-3 gap-8 hover-content">
-      <!-- Automation & Testing -->
-      <div class="glass p-6">
-        <h3 class="text-xl font-semibold text-cyan-300 mb-2">Automation & Testing</h3>
-        <p>UFT, Selenium, CI/CD, Functional, Regression, ETL Testing, E2E Testing, Database Testing, Salesforce Testing, API Testing</p>
-      </div>
-      <!-- Tools & Technologies -->
-      <div class="glass p-6">
-        <h3 class="text-xl font-semibold text-cyan-300 mb-2">Tools & Technologies</h3>
-        <p>JIRA, ALM, RQM, Rational Clear Quest, Informatica, Control M, Autosys, Salesforce, MS Project, Selenium Web Driver/Grid, Eclipse, TestNG, Parasoft, Postman, SOAP UI, SQL Navigator, AQT, Oracle SQL Developer, XQMF, TOAD</p>
-      </div>
-      <!-- Programming & Databases -->
-      <div class="glass p-6">
-        <h3 class="text-xl font-semibold text-cyan-300 mb-2">Programming & Databases</h3>
-        <p>SQL, VBScript, Shell, Java, XML, HTML, Oracle, DB2, MySQL, SQL Server</p>
+  <section id="skills" class="py-20">
+    <div class="glass hover-card max-w-6xl mx-auto px-6 text-center p-10">
+      <h2 class="text-3xl font-bold section-title mb-10">Technical Acumen</h2>
+      <div class="grid md:grid-cols-3 gap-8 hover-content">
+        <div class="glass p-6">
+          <h3 class="text-xl font-semibold text-cyan-300 mb-2">Automation & Testing</h3>
+          <p>UFT, Selenium, CI/CD, Functional, Regression, ETL Testing, E2E Testing, Database Testing, Salesforce Testing, API Testing</p>
+        </div>
+        <div class="glass p-6">
+          <h3 class="text-xl font-semibold text-cyan-300 mb-2">Tools & Technologies</h3>
+          <p>JIRA, ALM, RQM, Rational Clear Quest, Informatica, Control M, Autosys, Salesforce, MS Project, Selenium Web Driver/Grid, Eclipse, TestNG, Parasoft, Postman, SOAP UI, SQL Navigator, AQT, Oracle SQL Developer, XQMF, TOAD</p>
+        </div>
+        <div class="glass p-6">
+          <h3 class="text-xl font-semibold text-cyan-300 mb-2">Programming & Databases</h3>
+          <p>SQL, VBScript, Shell, Java, XML, HTML, Oracle, DB2, MySQL, SQL Server</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- EXPERIENCE -->
   <section id="experience" class="py-20">
@@ -196,6 +206,18 @@
         });
       })
       .catch(err => console.error('Error fetching GitHub repos:', err));
+
+    // 👇 Enable click/tap reveal for mobile
+    if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
+      document.querySelectorAll(".hover-card").forEach(card => {
+        card.addEventListener("click", () => {
+          const content = card.querySelector(".hover-content");
+          if (content) {
+            content.classList.toggle("show");
+          }
+        });
+      });
+    }
   </script>
 
 </body>
