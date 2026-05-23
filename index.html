@@ -3,260 +3,335 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Saritha Ayyappan | Lead Test Engineer</title>
+  <title>Saritha Ayyappan | QA Lead</title>
 
-  <!-- Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <!-- AOS Animations -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Text+Me+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    body {
-      font-family: 'Text Me One', sans-serif;
-      margin: 0;
-      background: linear-gradient(to bottom, #0b1221 0%, #003366 50%, #007bff 100%);
-      color: #e0e0e0;
+    html {
       scroll-behavior: smooth;
     }
 
-    h1, h2, h3 {
-      font-family: 'Poiret One', cursive;
-      letter-spacing: 1px;
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(
+        135deg,
+        #0f172a 0%,
+        #111827 50%,
+        #1e293b 100%
+      );
+      color: #f8fafc;
+      overflow-x: hidden;
     }
 
-    /* Glassmorphism Card */
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
     .glass {
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(15px);
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      border-radius: 1.25rem;
-      padding: 2rem;
-      box-shadow: 0 8px 20px rgba(0, 255, 255, 0.1);
-      transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+      transition: all 0.3s ease;
     }
 
     .glass:hover {
-      transform: translateY(-8px) scale(1.03);
-      box-shadow: 0 15px 40px rgba(0, 255, 255, 0.3);
-      border: 2px solid rgba(0, 255, 255, 0.5);
+      transform: translateY(-4px);
+      border-color: rgba(255,255,255,0.14);
     }
 
-    .section-title {
-      background: linear-gradient(90deg, #00ffff, #66ccff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    .metric-card:hover {
+      transform: translateY(-5px);
     }
 
-    .avatar {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      border: 3px solid rgba(255,255,255,0.8);
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
-      margin-bottom: 20px;
+    .social-icon {
+      transition: transform 0.3s ease;
     }
 
-    .hover-content {
-      opacity: 0;
-      max-height: 0;
-      overflow: hidden;
-      transition: opacity 0.5s ease, max-height 0.5s ease;
-    }
-
-    .hover-card:hover .hover-content {
-      opacity: 1;
-      max-height: 800px;
-    }
-
-    footer {
-      background: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(10px);
-    }
-
-    .hover-content.show {
-      opacity: 1 !important;
-      max-height: 800px !important;
-    }
-
-    /* Social icon hover */
     .social-icon:hover {
-      transform: scale(1.15);
-    }
-
-    /* Glassy email pill */
-    #email-pill {
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(15px);
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      border-radius: 9999px;
-      box-shadow: 0 8px 20px rgba(0, 255, 255, 0.1);
-      transition: all 0.35s ease;
-      cursor: pointer;
-    }
-
-    #email-pill:hover,
-    #email-pill.active {
       transform: scale(1.08);
-      box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
-      border-color: rgba(0, 255, 255, 0.5);
+    }
+
+    .hero-glow {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: rgba(59,130,246,0.10);
+      filter: blur(120px);
+      z-index: 0;
+      border-radius: 50%;
     }
   </style>
 </head>
 
-<body class="leading-relaxed">
+<body>
 
   <!-- HERO -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-    <img src="Saritha_Official.jpg" alt="Saritha Ayyappan" class="avatar">
-    <h1 class="text-6xl font-bold text-white mb-3">Saritha Ayyappan</h1>
-    <p class="text-xl text-cyan-200 font-semibold mb-6">Lead Test Engineer</p>
-    <div class="space-x-4">
-      <a href="#experience" class="bg-white text-black px-6 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">Experience</a>
-      <a href="Saritha.Ayyappan_Resume.pdf" download class="border border-white px-6 py-2 rounded-lg text-white hover:bg-white hover:text-black transition">Download Resume</a>
+  <section class="relative min-h-screen flex items-center px-6 lg:px-20 overflow-hidden">
+
+    <div class="hero-glow top-0 right-0"></div>
+
+    <div class="grid lg:grid-cols-2 gap-16 items-center relative z-10 w-full max-w-7xl mx-auto">
+
+      <div>
+
+        <div class="inline-flex items-center px-4 py-2 rounded-full glass text-sm text-blue-300 mb-8">
+          QA LEAD & AUTOMATION STRATEGIST
+        </div>
+
+        <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-6">
+          Saritha Ayyappan
+        </h1>
+
+        <h2 class="text-2xl lg:text-3xl text-blue-400 font-semibold mb-8">
+          Lead QA Engineer | Quality Engineering Leader
+        </h2>
+
+        <p class="text-slate-300 text-lg leading-8 max-w-2xl mb-10">
+          17+ years driving enterprise quality assurance, automation strategy, and release excellence across banking, healthcare, and government systems.
+        </p>
+
+        <div class="flex flex-wrap gap-5">
+          <a href="#experience" class="glass px-8 py-4 rounded-xl font-medium hover:bg-white/10">
+            View Experience
+          </a>
+
+          <a href="Saritha.Ayyappan_Resume.pdf" download class="bg-blue-500 hover:bg-blue-600 transition px-8 py-4 rounded-xl font-medium shadow-lg shadow-blue-500/20">
+            Download Resume
+          </a>
+        </div>
+      </div>
+
+      <div class="flex justify-center lg:justify-end">
+        <div class="glass rounded-[32px] p-4 max-w-md">
+          <img
+            src="Saritha_Official.jpg"
+            alt="Saritha Ayyappan"
+            class="rounded-[28px] w-full object-cover"
+          >
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- METRICS -->
+  <section class="px-6 lg:px-20 -mt-20 relative z-20">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+
+      <div class="glass metric-card rounded-3xl p-8 text-center">
+        <h3 class="text-5xl font-bold text-blue-400 mb-2">17+</h3>
+        <p class="text-slate-300">Years of Experience</p>
+      </div>
+
+      <div class="glass metric-card rounded-3xl p-8 text-center">
+        <h3 class="text-5xl font-bold text-blue-400 mb-2">5+</h3>
+        <p class="text-slate-300">Enterprise Domains</p>
+      </div>
+
+      <div class="glass metric-card rounded-3xl p-8 text-center">
+        <h3 class="text-5xl font-bold text-blue-400 mb-2">40%</h3>
+        <p class="text-slate-300">Regression Reduction</p>
+      </div>
+
+      <div class="glass metric-card rounded-3xl p-8 text-center">
+        <h3 class="text-5xl font-bold text-blue-400 mb-2">10+</h3>
+        <p class="text-slate-300">QA Teams Led</p>
+      </div>
+
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="py-20 flex justify-center">
-    <div class="glass hover-card max-w-4xl text-center">
-      <h2 class="text-3xl font-bold section-title mb-4">About Me</h2>
-      <p class="hover-content text-white/90">
-        I am a Lead Test Engineer with 17 years of experience specializing in automation, root cause analysis, and strategic testing. I focus on improving software quality, optimizing QA strategies, and mentoring teams towards excellence.
-      </p>
-    </div>
-  </section>
+  <section class="px-6 lg:px-20 py-28">
 
-  <!-- SKILLS -->
-  <section id="skills" class="py-20">
-    <div class="glass hover-card max-w-6xl mx-auto px-6 text-center p-10">
-      <h2 class="text-3xl font-bold section-title mb-10">Technical Acumen</h2>
-      <div class="grid md:grid-cols-3 gap-8 hover-content">
-        <div class="glass p-6">
-          <h3 class="text-xl font-semibold text-cyan-300 mb-2">Automation & Testing</h3>
-          <p>UFT, Selenium, CI/CD, Functional, Regression, ETL Testing, E2E Testing, Database Testing, Salesforce Testing, API Testing</p>
-        </div>
-        <div class="glass p-6">
-          <h3 class="text-xl font-semibold text-cyan-300 mb-2">Tools & Technologies</h3>
-          <p>JIRA, ALM, RQM, Rational Clear Quest, Informatica, Control M, Autosys, Salesforce, MS Project, Selenium Web Driver/Grid, Eclipse, TestNG, Parasoft, Postman, SOAP UI, SQL Navigator, AQT, Oracle SQL Developer, XQMF, TOAD</p>
-        </div>
-        <div class="glass p-6">
-          <h3 class="text-xl font-semibold text-cyan-300 mb-2">Programming & Databases</h3>
-          <p>SQL, VBScript, Shell, Java, XML, HTML, Oracle, DB2, MySQL, SQL Server</p>
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10">
+
+      <div class="glass rounded-3xl p-10">
+        <h2 class="text-3xl font-semibold mb-8">Executive Summary</h2>
+
+        <div class="space-y-5 text-slate-300 leading-8">
+          <p>• Led enterprise QA initiatives across mission-critical applications.</p>
+          <p>• Reduced regression effort through automation and process optimization.</p>
+          <p>• Experienced in API, ETL, UI, and backend validation.</p>
+          <p>• Strong expertise in Agile QA leadership and release management.</p>
+          <p>• Passionate about quality engineering and continuous improvement.</p>
         </div>
       </div>
+
+      <div class="glass rounded-3xl p-10">
+        <h2 class="text-3xl font-semibold mb-8">Core Expertise</h2>
+
+        <div class="grid grid-cols-2 gap-5">
+
+          <div class="bg-white/5 rounded-2xl p-5 text-center">Test Automation</div>
+          <div class="bg-white/5 rounded-2xl p-5 text-center">QA Strategy</div>
+          <div class="bg-white/5 rounded-2xl p-5 text-center">API & ETL Testing</div>
+          <div class="bg-white/5 rounded-2xl p-5 text-center">CI/CD Validation</div>
+          <div class="bg-white/5 rounded-2xl p-5 text-center">Defect Prevention</div>
+          <div class="bg-white/5 rounded-2xl p-5 text-center">Root Cause Analysis</div>
+
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- EXPERIENCE -->
-  <section id="experience" class="py-20">
-    <div class="glass hover-card max-w-6xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold section-title mb-10">Professional Experience</h2>
-      <div class="hover-content text-white/90">
-        <p>QA EXPERIENCE details can be added here — summarize key achievements, QA Lead, and impactful projects in concise points.</p>
+  <section id="experience" class="px-6 lg:px-20 pb-28">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="flex items-center justify-between mb-12">
+        <h2 class="text-4xl font-semibold">Professional Experience</h2>
       </div>
+
+      <div class="space-y-8">
+
+        <div class="glass rounded-3xl p-10">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5 mb-6">
+            <div>
+              <h3 class="text-2xl font-semibold text-blue-400">QA Lead</h3>
+              <p class="text-slate-400 mt-2">North Carolina Administrative Office of the Courts</p>
+            </div>
+
+            <div class="text-slate-400">
+              Nov 2019 – Jun 2023
+            </div>
+          </div>
+
+          <div class="space-y-4 text-slate-300 leading-8">
+            <p>• Led enterprise QA delivery for mission-critical applications.</p>
+            <p>• Improved regression efficiency through automation strategy.</p>
+            <p>• Coordinated QA efforts across Agile teams.</p>
+            <p>• Enhanced defect prevention and release validation processes.</p>
+          </div>
+        </div>
+
+        <div class="glass rounded-3xl p-10">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5 mb-6">
+            <div>
+              <h3 class="text-2xl font-semibold text-blue-400">Senior QA Engineer</h3>
+              <p class="text-slate-400 mt-2">Wells Fargo</p>
+            </div>
+
+            <div class="text-slate-400">
+              Previous Experience
+            </div>
+          </div>
+
+          <div class="space-y-4 text-slate-300 leading-8">
+            <p>• Led automation initiatives using Selenium and UFT.</p>
+            <p>• Reduced regression cycles through framework optimization.</p>
+            <p>• Performed API, ETL, UI, and backend testing.</p>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="py-20">
-    <div class="glass hover-card max-w-6xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold section-title mb-10">Latest Projects</h2>
-      <div id="github-projects" class="grid md:grid-cols-2 gap-8 hover-content"></div>
-    </div>
-  </section>
+  <section class="px-6 lg:px-20 pb-28">
 
-  <!-- CERTIFICATIONS -->
-  <section id="certifications" class="py-20">
-    <div class="glass hover-card max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold section-title mb-8">Certifications</h2>
-      <div class="flex justify-center items-center space-x-8 flex-wrap hover-content">
-        <img src="ISTQB.png" alt="ISTQB" class="h-16 w-16 object-contain">
-        <img src="CSM.png" alt="CSM" class="h-14 w-14 object-contain">
+    <div class="max-w-7xl mx-auto">
+
+      <h2 class="text-4xl font-semibold mb-12">Featured Initiatives</h2>
+
+      <div class="grid lg:grid-cols-2 gap-8">
+
+        <div class="glass rounded-3xl p-10">
+          <h3 class="text-2xl font-semibold text-blue-400 mb-5">
+            Enterprise Automation Framework
+          </h3>
+
+          <p class="text-slate-300 leading-8 mb-6">
+            Built scalable Selenium automation framework integrated with CI pipelines to improve regression efficiency and release stability.
+          </p>
+
+          <div class="flex flex-wrap gap-3">
+            <span class="bg-white/5 px-4 py-2 rounded-xl text-sm">Selenium</span>
+            <span class="bg-white/5 px-4 py-2 rounded-xl text-sm">TestNG</span>
+            <span class="bg-white/5 px-4 py-2 rounded-xl text-sm">Jenkins</span>
+          </div>
+        </div>
+
+        <div class="glass rounded-3xl p-10">
+          <h3 class="text-2xl font-semibold text-blue-400 mb-5">
+            Salesforce Testing Initiative
+          </h3>
+
+          <p class="text-slate-300 leading-8 mb-6">
+            Led end-to-end Salesforce testing efforts including integration validation and enterprise release support.
+          </p>
+
+          <div class="flex flex-wrap gap-3">
+            <span class="bg-white/5 px-4 py-2 rounded-xl text-sm">Salesforce</span>
+            <span class="bg-white/5 px-4 py-2 rounded-xl text-sm">API Testing</span>
+            <span class="bg-white/5 px-4 py-2 rounded-xl text-sm">JIRA</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-<footer class="py-10 flex flex-col items-center text-center text-white">
-  
-  <!-- Glassy Email Pill -->
-  <div id="email-pill" 
-       class="inline-flex items-center justify-center px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-md transition-all mx-auto mb-6 cursor-pointer">
-    <span class="text-cyan-400 text-lg mr-2">📫</span>
-    <a href="mailto:saritha.c.ayyappan@gmail.com" 
-       class="text-white font-semibold hover:text-cyan-300 transition-colors">
-      saritha.c.ayyappan@gmail.com
-    </a>
-  </div>
+  <!-- CONTACT -->
+  <section class="px-6 lg:px-20 pb-20">
 
-  <!-- Social Icons -->
-  <div class="flex justify-center space-x-10">
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/in/saritha-ayyappan-9bb70810/" target="_blank" title="LinkedIn"
-       class="transition-transform transform hover:scale-125">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" 
-           alt="LinkedIn" width="48" height="48" class="rounded-lg">
-    </a>
+    <div class="max-w-7xl mx-auto glass rounded-[32px] p-10 lg:p-14">
 
-    <!-- GitHub -->
-    <a href="https://github.com/sarithaca" target="_blank" title="GitHub"
-       class="transition-transform transform hover:scale-125">
-      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" 
-           alt="GitHub" width="44" height="44" class="rounded-lg bg-white p-1">
-    </a>
-  </div>
+      <div class="flex flex-col lg:flex-row gap-10 lg:items-center lg:justify-between">
 
-  <!-- Copyright -->
-  <p class="mt-6 text-xs text-gray-300">
-    © <script>document.write(new Date().getFullYear())</script> Saritha Ayyappan
-  </p>
-</footer>
+        <div>
+          <h2 class="text-4xl font-semibold mb-4">Let's Connect</h2>
+          <p class="text-slate-300 leading-8 max-w-2xl">
+            I'm open to leadership opportunities, enterprise QA initiatives, and quality engineering collaborations.
+          </p>
+        </div>
 
-  <script>
-    AOS.init();
+        <div class="space-y-5 text-slate-300">
 
-    // GitHub Projects Dynamic Fetch
-    fetch('https://api.github.com/users/sarithaca/repos?sort=updated&per_page=4')
-      .then(res => res.json())
-      .then(repos => {
-        const container = document.getElementById('github-projects');
-        repos.forEach(repo => {
-          const card = document.createElement('div');
-          card.className = 'glass hover-card p-6';
-          card.innerHTML = `
-            <h3 class="text-xl font-semibold text-cyan-300 mb-2">
-              <a href="${repo.html_url}" target="_blank">${repo.name}</a>
-            </h3>
-            <p class="text-white/80">${repo.description || ''}</p>
-          `;
-          container.appendChild(card);
-        });
-      })
-      .catch(err => console.error('Error fetching GitHub repos:', err));
+          <div class="glass rounded-2xl px-6 py-4 hover:bg-white/10">
+            <a href="mailto:saritha.c.ayyappan@gmail.com">
+              saritha.c.ayyappan@gmail.com
+            </a>
+          </div>
 
-    // Enable click/tap reveal for mobile hover-cards
-    if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
-      document.querySelectorAll(".hover-card").forEach(card => {
-        card.addEventListener("click", () => {
-          const content = card.querySelector(".hover-content");
-          if (content) content.classList.toggle("show");
-        });
-      });
-    }
+          <div class="flex items-center gap-5 justify-center lg:justify-start">
 
-    // Enable tap pop effect for email pill
-    const emailPill = document.getElementById('email-pill');
-    if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
-      emailPill.addEventListener('click', () => {
-        emailPill.classList.add('active');
-        setTimeout(() => emailPill.classList.remove('active'), 400);
-      });
-    }
-  </script>
+            <a href="https://www.linkedin.com/in/saritha-ayyappan-9bb70810/" target="_blank" class="social-icon">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                alt="LinkedIn"
+                class="w-10 h-10 rounded-lg"
+              >
+            </a>
+
+            <a href="https://github.com/sarithaca" target="_blank" class="social-icon">
+              <img
+                src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                alt="GitHub"
+                class="w-10 h-10 rounded-full bg-white p-1"
+              >
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
 
 </body>
 </html>
