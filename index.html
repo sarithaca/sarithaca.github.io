@@ -1,202 +1,428 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Saritha Ayyappan | QA Lead</title>
 
   <!-- Google Fonts -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind -->
+
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+
+    *{
+
+      margin:0;
+
+      padding:0;
+
+      box-sizing:border-box;
+
     }
 
-    html {
-      scroll-behavior: smooth;
+    html{
+
+      scroll-behavior:smooth;
+
     }
 
-    body {
-      font-family: 'Inter', sans-serif;
+    body{
+
+      font-family:'Inter',sans-serif;
+
       background:
-        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px),
-        linear-gradient(135deg, #0b1120 0%, #111827 50%, #172033 100%);
-      background-size: 40px 40px, 40px 40px, cover;
-      color: #f8fafc;
-      overflow-x: hidden;
+
+      linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+
+      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px),
+
+      linear-gradient(135deg,#0b1120 0%,#111827 50%,#172033 100%);
+
+      background-size:40px 40px,40px 40px,cover;
+
+      color:#f8fafc;
+
+      overflow-x:hidden;
+
     }
 
-    h1,h2,h3 {
-      font-family: 'Poppins', sans-serif;
+    h1,h2,h3{
+
+      font-family:'Poppins',sans-serif;
+
     }
 
-    .glass {
-      background: rgba(255,255,255,0.04);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.06);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.22);
-      transition: all 0.3s ease;
+    .glass{
+
+      background:rgba(255,255,255,0.04);
+
+      backdrop-filter:blur(10px);
+
+      -webkit-backdrop-filter:blur(10px);
+
+      border:1px solid rgba(255,255,255,0.06);
+
+      box-shadow:
+
+      0 8px 30px rgba(0,0,0,0.22);
+
+      transition:all 0.3s ease;
+
     }
 
-    .glass:hover {
-      transform: translateY(-3px);
-      border-color: rgba(255,255,255,0.10);
+    .glass:hover{
+
+      transform:translateY(-3px);
+
+      border-color:rgba(255,255,255,0.10);
+
     }
 
-    .nav-link {
-      transition: all 0.25s ease;
+    .nav-link{
+
+      transition:all 0.25s ease;
+
     }
 
     .nav-link:hover,
-    .nav-link.active {
-      background: rgba(96,165,250,0.10);
-      color: #93c5fd;
+
+    .nav-link.active{
+
+      background:rgba(96,165,250,0.10);
+
+      color:#93c5fd;
+
     }
 
-    .metric-card:hover {
-      transform: translateY(-4px);
+    .metric-card:hover{
+
+      transform:translateY(-4px);
+
     }
 
-    .social-icon {
-      transition: transform 0.3s ease;
+    .social-icon{
+
+      transition:all 0.3s ease;
+
     }
 
-    .social-icon:hover {
-      transform: scale(1.08);
+    .social-icon:hover{
+
+      transform:scale(1.08);
+
     }
 
-    .timeline-line {
-      position: absolute;
-      left: 10px;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: rgba(255,255,255,0.08);
+    .timeline-line{
+
+      position:absolute;
+
+      left:10px;
+
+      top:0;
+
+      bottom:0;
+
+      width:2px;
+
+      background:rgba(255,255,255,0.08);
+
     }
 
-    .timeline-dot {
-      position: absolute;
-      left: 3px;
-      top: 14px;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background: #60a5fa;
-      box-shadow: 0 0 10px rgba(96,165,250,0.4);
+    .timeline-dot{
+
+      position:absolute;
+
+      left:3px;
+
+      top:14px;
+
+      width:16px;
+
+      height:16px;
+
+      border-radius:50%;
+
+      background:#60a5fa;
+
+      box-shadow:
+
+      0 0 10px rgba(96,165,250,0.4);
+
     }
 
     @media(max-width:1024px){
-      .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        margin-bottom: 30px;
+
+      .sidebar{
+
+        position:relative;
+
+        width:100%;
+
+        height:auto;
+
+        margin-bottom:30px;
+
       }
 
-      .main-content {
-        margin-left: 0 !important;
+      .main-content{
+
+        margin-left:0 !important;
+
       }
+
     }
+
   </style>
+
 </head>
 
 <body>
 
-  <!-- MAIN LAYOUT -->
-  <div class="flex flex-col lg:flex-row min-h-screen">
+<div class="flex flex-col lg:flex-row min-h-screen">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar w-full lg:w-[290px] lg:h-screen lg:fixed p-5 lg:p-6">
+  <!-- SIDEBAR -->
 
-      <div class="glass rounded-3xl p-6 h-full flex flex-col justify-between">
+  <aside class="sidebar w-full lg:w-[285px] lg:h-screen lg:fixed p-5">
 
-        <div>
+    <div class="glass rounded-3xl p-6 h-full flex flex-col justify-between">
 
-          <!-- PROFILE -->
-          <div class="flex flex-col items-center text-center">
+      <div>
 
-            <img
-              src="Official_Profile.jpeg"
-              alt="Saritha Ayyappan"
-              class="w-24 h-24 rounded-full object-cover border-2 border-blue-400/40 mb-4"
-            >
+        <!-- PROFILE -->
 
-            <h1 class="text-2xl font-semibold tracking-tight">
-              Saritha Ayyappan
-            </h1>
+        <div class="flex flex-col items-center text-center">
 
-            <p class="text-[12px] uppercase tracking-[3px] text-slate-400 mt-2">
-              QA LEAD & AUTOMATION
-            </p>
+          <img
 
-            <div class="mt-5 inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-400/20 text-green-300 text-xs">
-              ● Open to Opportunities
-            </div>
+            src="Saritha_Official.jpg"
+
+            alt="Saritha Ayyappan"
+
+            class="w-24 h-24 rounded-full object-cover border border-blue-400/30 mb-4"
+
+          >
+
+          <h1 class="text-[24px] font-semibold tracking-tight">
+
+            Saritha Ayyappan
+
+          </h1>
+
+          <p class="text-[11px] uppercase tracking-[3px] text-slate-400 mt-2">
+
+            QA LEAD & AUTOMATION
+
+          </p>
+
+          <div class="mt-5 inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-400/20 text-green-300 text-[11px]">
+
+            ● Open to Opportunities
 
           </div>
 
-          <!-- NAV -->
-          <nav class="mt-10 space-y-2 text-[15px]">
+        </div>
 
-            <a href="#home" class="nav-link active flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300">
-              🏠 Home
-            </a>
+        <!-- NAVIGATION -->
 
-            <a href="#experience" class="nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300">
-              💼 Experience
-            </a>
+        <nav class="mt-10 space-y-2 text-[14px]">
 
-            <a href="#skills" class="nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300">
-              ⚡ Skills
-            </a>
+          <a href="#home"
 
-            <a href="#projects" class="nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300">
-              🚀 Projects
-            </a>
+             class="nav-link active flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300">
 
-            <a href="#contact" class="nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300">
-              ✉ Contact
-            </a>
+             🏠 Home
 
-          </nav>
+          </a>
+
+          <a href="#experience"
+
+             class="nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300">
+
+             💼 Experience
+
+          </a>
+
+          <a href="#skills"
+
+             class="nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300">
+
+             ⚡ Skills
+
+          </a>
+
+          <a href="#projects"
+
+             class="nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300">
+
+             🚀 Projects
+
+          </a>
+
+          <a href="#contact"
+
+             class="nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300">
+
+             ✉ Contact
+
+          </a>
+
+        </nav>
+
+      </div>
+
+      <!-- SIDEBAR FOOTER -->
+
+      <div class="pt-8 border-t border-white/5 text-[13px] text-slate-400 space-y-4">
+
+        <p>✉ saritha.c.ayyappan@gmail.com</p>
+
+        <p>📍 North Carolina, USA</p>
+
+      </div>
+
+    </div>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+
+  <main class="main-content flex-1 lg:ml-[315px] px-6 lg:px-12 py-10">
+
+    <!-- HERO -->
+
+    <section id="home" class="min-h-[82vh] flex flex-col justify-center">
+
+      <div class="max-w-5xl">
+
+        <p class="uppercase tracking-[5px] text-blue-300 text-[11px] mb-4">
+
+          SARITHA AYYAPPAN
+
+        </p>
+
+        <h1 class="text-4xl lg:text-5xl font-semibold leading-[1.08] tracking-tight max-w-3xl">
+
+          QA Lead & Enterprise Quality Engineering Specialist
+
+        </h1>
+
+        <p class="text-slate-400 text-sm mt-4 tracking-wide">
+
+          Automation • QA Strategy • Release Excellence • Enterprise Testing
+
+        </p>
+
+        <p class="text-slate-300 text-[14px] leading-7 max-w-2xl mt-7">
+
+          QA Lead with 17+ years of experience delivering enterprise quality engineering solutions across banking, healthcare, government, and enterprise systems.
+
+          Specialized in automation strategy, release validation, defect prevention, and scalable QA leadership.
+
+        </p>
+
+        <!-- BUTTONS -->
+
+        <div class="flex flex-wrap gap-4 mt-10">
+
+          <a href="#experience"
+
+             class="glass px-6 py-3 rounded-xl text-sm font-medium hover:bg-white/10">
+
+             View Experience →
+
+          </a>
+
+          <a href="Saritha.Ayyappan_Resume.pdf"
+
+             download
+
+             class="bg-blue-500 hover:bg-blue-600 transition px-6 py-3 rounded-xl text-sm font-medium shadow-lg shadow-blue-500/20">
+
+             Download Resume
+
+          </a>
 
         </div>
 
-        <!-- CONTACT -->
-        <div class="pt-10 border-t border-white/5 text-sm text-slate-400 space-y-4">
+        <!-- METRICS -->
 
-          <p>✉ saritha.c.ayyappan@gmail.com</p>
-          <p>📍 North Carolina, USA</p>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-16">
 
-          <div class="flex items-center gap-4 pt-2">
+          <div class="glass metric-card rounded-2xl p-5">
 
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/saritha-ayyappan-9bb70810/" target="_blank" class="social-icon">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                alt="LinkedIn"
-                class="w-10 h-10 rounded-lg"
-              >
-            </a>
+            <h3 class="text-2xl font-semibold text-blue-400">
 
-            <!-- GitHub -->
-            <a href="https://github.com/sarithaca" target="_blank" class="social-icon">
-              <img
-                src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-                alt="GitHub"
-                class="w-10 h-10 rounded-full bg-white p-1"
-              >
-            </a>
+              17+
+
+            </h3>
+
+            <p class="text-slate-400 text-[13px] mt-1">
+
+              Years Experience
+
+            </p>
+
+          </div>
+
+          <div class="glass metric-card rounded-2xl p-5">
+
+            <h3 class="text-2xl font-semibold text-blue-400">
+
+              40%
+
+            </h3>
+
+            <p class="text-slate-400 text-[13px] mt-1">
+
+              Regression Reduction
+
+            </p>
+
+          </div>
+
+          <div class="glass metric-card rounded-2xl p-5">
+
+            <h3 class="text-2xl font-semibold text-blue-400">
+
+              10+
+
+            </h3>
+
+            <p class="text-slate-400 text-[13px] mt-1">
+
+              QA Teams Led
+
+            </p>
+
+          </div>
+
+          <div class="glass metric-card rounded-2xl p-5">
+
+            <h3 class="text-2xl font-semibold text-blue-400">
+
+              5+
+
+            </h3>
+
+            <p class="text-slate-400 text-[13px] mt-1">
+
+              Enterprise Domains
+
+            </p>
 
           </div>
 
@@ -204,319 +430,91 @@
 
       </div>
 
-    </aside>
+    </section>
 
-    <!-- MAIN CONTENT -->
-    <main class="main-content flex-1 lg:ml-[320px] px-6 lg:px-12 py-8 lg:py-12">
+    <!-- EXPERIENCE -->
 
-      <!-- HERO -->
-      <section id="home" class="min-h-[85vh] flex flex-col justify-center">
+    <section id="experience" class="py-16">
 
-        <div class="max-w-5xl">
+      <div class="mb-10">
 
-          <p class="uppercase tracking-[4px] text-blue-300 text-xs mb-5">
-            HELLO, I'M SARITHA
-          </p>
+        <p class="uppercase tracking-[4px] text-blue-300 text-[11px] mb-3">
 
-          <h1 class="text-5xl lg:text-6xl font-semibold leading-tight tracking-tight max-w-4xl">
-            Enterprise Quality Engineering & Automation Leadership
-          </h1>
+          CAREER
 
-          <p class="text-slate-300 text-[15px] leading-8 max-w-3xl mt-8">
-            QA Lead with 17+ years of experience delivering enterprise quality engineering solutions across banking, healthcare, government, and enterprise systems. Specialized in automation strategy, release validation, defect prevention, and scalable QA leadership.
-          </p>
+        </p>
 
-          <div class="flex flex-wrap gap-4 mt-10">
+        <h2 class="text-3xl font-semibold tracking-tight">
 
-            <a href="#experience" class="glass px-6 py-3 rounded-xl text-sm font-medium hover:bg-white/10">
-              View Experience →
-            </a>
+          Professional Experience
 
-            <a href="Saritha_C_Ayyappan_Resume.pdf" download class="bg-blue-500 hover:bg-blue-600 transition px-6 py-3 rounded-xl text-sm font-medium shadow-lg shadow-blue-500/20">
-              Download Resume
-            </a>
+        </h2>
 
-          </div>
+      </div>
 
-          <!-- METRICS -->
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-16">
+      <div class="relative pl-10 space-y-10">
 
-            <div class="glass metric-card rounded-2xl p-5">
-              <h3 class="text-3xl font-semibold text-blue-400">17+</h3>
-              <p class="text-slate-400 text-sm mt-2">Years Experience</p>
-            </div>
+        <div class="timeline-line"></div>
 
-            <div class="glass metric-card rounded-2xl p-5">
-              <h3 class="text-3xl font-semibold text-blue-400">40%</h3>
-              <p class="text-slate-400 text-sm mt-2">Regression Reduction</p>
-            </div>
+        <!-- EXPERIENCE CARD -->
 
-            <div class="glass metric-card rounded-2xl p-5">
-              <h3 class="text-3xl font-semibold text-blue-400">10+</h3>
-              <p class="text-slate-400 text-sm mt-2">QA Teams Led</p>
-            </div>
+        <div class="relative">
 
-            <div class="glass metric-card rounded-2xl p-5">
-              <h3 class="text-3xl font-semibold text-blue-400">5+</h3>
-              <p class="text-slate-400 text-sm mt-2">Enterprise Domains</p>
-            </div>
+          <div class="timeline-dot"></div>
 
-          </div>
+          <div class="glass rounded-3xl p-7">
 
-        </div>
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 mb-6">
 
-      </section>
+              <div>
 
-      <!-- EXPERIENCE -->
-      <section id="experience" class="py-20">
+                <h3 class="text-xl font-semibold text-blue-400">
 
-        <div class="mb-12">
-          <p class="uppercase tracking-[4px] text-blue-300 text-xs mb-4">
-            CAREER
-          </p>
+                  QA Lead
 
-          <h2 class="text-3xl font-semibold tracking-tight">
-            Professional Experience
-          </h2>
-        </div>
+                </h3>
 
-        <div class="relative pl-10 space-y-10">
+                <p class="text-slate-400 text-sm mt-1">
 
-          <div class="timeline-line"></div>
+                  North Carolina Administrative Office of the Courts
 
-          <!-- EXPERIENCE CARD -->
-          <div class="relative">
-            <div class="timeline-dot"></div>
-
-            <div class="glass rounded-3xl p-7">
-
-              <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 mb-6">
-
-                <div>
-                  <h3 class="text-xl font-semibold text-blue-400">
-                    QA Lead
-                  </h3>
-
-                  <p class="text-slate-400 text-sm mt-1">
-                    North Carolina Administrative Office of the Courts
-                  </p>
-                </div>
-
-                <div class="text-slate-500 text-sm">
-                  Nov 2019 – Jun 2023
-                </div>
+                </p>
 
               </div>
 
-              <div class="space-y-4 text-slate-300 text-[15px] leading-7">
-                <p>• Led enterprise QA delivery for mission-critical government applications.</p>
-                <p>• Improved regression efficiency through automation strategy and framework optimization.</p>
-                <p>• Coordinated QA validation across Agile teams and release cycles.</p>
-                <p>• Enhanced defect prevention and root cause analysis processes.</p>
-              </div>
+              <div class="text-slate-500 text-sm">
 
-            </div>
-          </div>
-
-          <!-- EXPERIENCE CARD -->
-          <div class="relative">
-            <div class="timeline-dot"></div>
-
-            <div class="glass rounded-3xl p-7">
-
-              <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 mb-6">
-
-                <div>
-                  <h3 class="text-xl font-semibold text-blue-400">
-                    Senior QA Engineer
-                  </h3>
-
-                  <p class="text-slate-400 text-sm mt-1">
-                    Wells Fargo
-                  </p>
-                </div>
-
-                <div class="text-slate-500 text-sm">
-                  Previous Experience
-                </div>
+                Nov 2019 – Jun 2023
 
               </div>
 
-              <div class="space-y-4 text-slate-300 text-[15px] leading-7">
-                <p>• Led automation initiatives using Selenium, UFT, and enterprise QA tools.</p>
-                <p>• Performed API, ETL, database, and UI testing across enterprise platforms.</p>
-                <p>• Supported release management, validation strategy, and defect triage.</p>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- SKILLS -->
-      <section id="skills" class="py-20">
-
-        <div class="mb-12">
-          <p class="uppercase tracking-[4px] text-blue-300 text-xs mb-4">
-            CAPABILITIES
-          </p>
-
-          <h2 class="text-3xl font-semibold tracking-tight">
-            Skills & Tools
-          </h2>
-        </div>
-
-        <div class="grid lg:grid-cols-2 gap-7">
-
-          <div class="glass rounded-3xl p-7">
-
-            <h3 class="text-lg font-semibold mb-6 text-blue-300">
-              Automation & Testing
-            </h3>
-
-            <div class="flex flex-wrap gap-3 text-sm">
-              <span class="bg-white/5 px-4 py-2 rounded-xl">Selenium</span>
-              <span class="bg-white/5 px-4 py-2 rounded-xl">Playwright</span>
-              <span class="bg-white/5 px-4 py-2 rounded-xl">UFT</span>
-              <span class="bg-white/5 px-4 py-2 rounded-xl">API Testing</span>
-              <span class="bg-white/5 px-4 py-2 rounded-xl">ETL Testing</span>
-              <span class="bg-white/5 px-4 py-2 rounded-xl">Regression Testing</span>
             </div>
 
-          </div>
+            <div class="space-y-4 text-slate-300 text-[14px] leading-7">
 
-          <div class="glass rounded-3xl p-7">
+              <p>
 
-            <h3 class="text-lg font-semibold mb-6 text-blue-300">
-              Enterprise Tools
-            </h3>
+                • Led enterprise QA delivery for mission-critical government applications.
 
-            <div class="flex flex-wrap gap-3 text-sm">
-              <span class="bg-white/5 px-4 py-2 rounded-xl">JIRA</span>
-              <span class="bg-white/5 px-4 py-2 rounded-xl">Postman</span>
-              <span class="bg-white/5 px-4 py-2 rounded-xl">SOAP UI</span>
-              <span class="bg-white/5 px-4 py-2 rounded-xl">SQL</span>
-              <span class="bg-white/5 px-4 py-2 rounded-xl">Salesforce</span>
-              <span class="bg-white/5 px-4 py-2 rounded-xl">CI/CD</span>
-            </div>
-
-          </div>
-
-          <div class="glass rounded-3xl p-7">
-
-            <h3 class="text-lg font-semibold mb-6 text-blue-300">
-              Leadership & Strategy
-            </h3>
-
-            <div class="flex flex-wrap gap-3 text-sm">
-              <span class="bg-white/5 px-4 py-2 rounded-xl">Agile QA</span>
-              <span class="bg-white/5 px-4 py-2 rounded-xl">Release Management</span>
-              <span class="bg-white/5 px-4 py-2 rounded-xl">Defect Prevention</span>
-              <span class="bg-white/5 px-4 py-2 rounded-xl">Root Cause Analysis</span>
-            </div>
-
-          </div>
-
-          <div class="glass rounded-3xl p-7">
-
-            <h3 class="text-lg font-semibold mb-6 text-blue-300">
-              Certifications
-            </h3>
-
-            <div class="flex items-center gap-4 text-sm">
-              <span class="bg-white/5 px-4 py-2 rounded-xl">ISTQB</span>
-              <span class="bg-white/5 px-4 py-2 rounded-xl">CSM</span>
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- PROJECTS -->
-      <section id="projects" class="py-20">
-
-        <div class="mb-12">
-          <p class="uppercase tracking-[4px] text-blue-300 text-xs mb-4">
-            FEATURED WORK
-          </p>
-
-          <h2 class="text-3xl font-semibold tracking-tight">
-            Enterprise Initiatives
-          </h2>
-        </div>
-
-        <div class="grid lg:grid-cols-2 gap-7">
-
-          <div class="glass rounded-3xl p-7">
-
-            <h3 class="text-xl font-semibold text-blue-400 mb-5">
-              Enterprise Automation Framework
-            </h3>
-
-            <p class="text-slate-300 text-[15px] leading-7 mb-6">
-              Built scalable Selenium automation framework integrated with CI pipelines to improve regression efficiency and release stability.
-            </p>
-
-            <div class="flex flex-wrap gap-3 text-sm">
-              <span class="bg-white/5 px-4 py-2 rounded-xl">Selenium</span>
-              <span class="bg-white/5 px-4 py-2 rounded-xl">TestNG</span>
-              <span class="bg-white/5 px-4 py-2 rounded-xl">Jenkins</span>
-            </div>
-
-          </div>
-
-          <div class="glass rounded-3xl p-7">
-
-            <h3 class="text-xl font-semibold text-blue-400 mb-5">
-              Salesforce Testing Initiative
-            </h3>
-
-            <p class="text-slate-300 text-[15px] leading-7 mb-6">
-              Led end-to-end Salesforce validation efforts including integration testing, release support, and enterprise QA coordination.
-            </p>
-
-            <div class="flex flex-wrap gap-3 text-sm">
-              <span class="bg-white/5 px-4 py-2 rounded-xl">Salesforce</span>
-              <span class="bg-white/5 px-4 py-2 rounded-xl">API Testing</span>
-              <span class="bg-white/5 px-4 py-2 rounded-xl">JIRA</span>
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="pt-10 pb-20">
-
-        <div class="glass rounded-[28px] p-8 lg:p-10">
-
-          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
-
-            <div>
-              <h2 class="text-3xl font-semibold mb-4">
-                Let's Connect
-              </h2>
-
-              <p class="text-slate-300 text-[15px] leading-7 max-w-2xl">
-                Open to QA leadership opportunities, enterprise automation initiatives, and quality engineering collaborations.
               </p>
-            </div>
 
-            <div>
+              <p>
 
-              <div class="glass rounded-full px-6 py-4 hover:bg-white/10 transition-all duration-300 inline-flex items-center gap-3">
-                <span class="text-blue-400">📫</span>
+                • Improved regression efficiency through automation strategy and framework optimization.
 
-                <a href="mailto:saritha.c.ayyappan@gmail.com" class="text-white text-sm font-medium hover:text-blue-300 transition-colors">
-                  saritha.c.ayyappan@gmail.com
-                </a>
-              </div>
+              </p>
+
+              <p>
+
+                • Coordinated QA validation across Agile teams and release cycles.
+
+              </p>
+
+              <p>
+
+                • Enhanced defect prevention and root cause analysis processes.
+
+              </p>
 
             </div>
 
@@ -524,11 +522,292 @@
 
         </div>
 
-      </section>
+      </div>
 
-    </main>
+    </section>
 
-  </div>
+    <!-- SKILLS -->
+
+    <section id="skills" class="py-16">
+
+      <div class="mb-10">
+
+        <p class="uppercase tracking-[4px] text-blue-300 text-[11px] mb-3">
+
+          CAPABILITIES
+
+        </p>
+
+        <h2 class="text-3xl font-semibold tracking-tight">
+
+          Skills & Tools
+
+        </h2>
+
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-7">
+
+        <!-- CARD -->
+
+        <div class="glass rounded-3xl p-7">
+
+          <h3 class="text-lg font-semibold mb-5 text-blue-300">
+
+            Automation & Testing
+
+          </h3>
+
+          <div class="flex flex-wrap gap-3 text-sm">
+
+            <span class="bg-white/5 px-4 py-2 rounded-xl">
+
+              Selenium
+
+            </span>
+
+            <span class="bg-white/5 px-4 py-2 rounded-xl">
+
+              Playwright
+
+            </span>
+
+            <span class="bg-white/5 px-4 py-2 rounded-xl">
+
+              UFT
+
+            </span>
+
+            <span class="bg-white/5 px-4 py-2 rounded-xl">
+
+              API Testing
+
+            </span>
+
+            <span class="bg-white/5 px-4 py-2 rounded-xl">
+
+              ETL Testing
+
+            </span>
+
+          </div>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="glass rounded-3xl p-7">
+
+          <h3 class="text-lg font-semibold mb-5 text-blue-300">
+
+            Enterprise Tools
+
+          </h3>
+
+          <div class="flex flex-wrap gap-3 text-sm">
+
+            <span class="bg-white/5 px-4 py-2 rounded-xl">
+
+              JIRA
+
+            </span>
+
+            <span class="bg-white/5 px-4 py-2 rounded-xl">
+
+              Postman
+
+            </span>
+
+            <span class="bg-white/5 px-4 py-2 rounded-xl">
+
+              SOAP UI
+
+            </span>
+
+            <span class="bg-white/5 px-4 py-2 rounded-xl">
+
+              SQL
+
+            </span>
+
+            <span class="bg-white/5 px-4 py-2 rounded-xl">
+
+              CI/CD
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section id="projects" class="py-16">
+
+      <div class="mb-10">
+
+        <p class="uppercase tracking-[4px] text-blue-300 text-[11px] mb-3">
+
+          FEATURED WORK
+
+        </p>
+
+        <h2 class="text-3xl font-semibold tracking-tight">
+
+          Enterprise Initiatives
+
+        </h2>
+
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-7">
+
+        <!-- CARD -->
+
+        <div class="glass rounded-3xl p-7">
+
+          <h3 class="text-xl font-semibold text-blue-400 mb-5">
+
+            Enterprise Automation Framework
+
+          </h3>
+
+          <p class="text-slate-300 text-[14px] leading-7 mb-6">
+
+            Built scalable Selenium automation framework integrated with CI pipelines to improve regression efficiency and release stability.
+
+          </p>
+
+          <div class="flex flex-wrap gap-3 text-sm">
+
+            <span class="bg-white/5 px-4 py-2 rounded-xl">
+
+              Selenium
+
+            </span>
+
+            <span class="bg-white/5 px-4 py-2 rounded-xl">
+
+              TestNG
+
+            </span>
+
+            <span class="bg-white/5 px-4 py-2 rounded-xl">
+
+              Jenkins
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="pt-6 pb-16">
+
+      <div class="glass rounded-[24px] p-7 lg:p-8 max-w-3xl mx-auto text-center">
+
+        <p class="uppercase tracking-[4px] text-blue-300 text-[11px] mb-3">
+
+          CONTACT
+
+        </p>
+
+        <h2 class="text-2xl font-semibold mb-3">
+
+          Let’s Connect
+
+        </h2>
+
+        <p class="text-slate-400 text-[14px] leading-7 max-w-xl mx-auto mb-8">
+
+          Open to QA leadership opportunities, enterprise automation initiatives, and quality engineering collaborations.
+
+        </p>
+
+        <!-- EMAIL -->
+
+        <div class="inline-flex items-center justify-center px-6 py-3 bg-white/5 backdrop-blur-md border border-white/10 rounded-full shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 mb-6">
+
+          <span class="text-blue-400 text-lg mr-3">
+
+            📫
+
+          </span>
+
+          <a href="mailto:saritha.c.ayyappan@gmail.com"
+
+             class="text-white text-sm font-medium hover:text-blue-300 transition-colors">
+
+             saritha.c.ayyappan@gmail.com
+
+          </a>
+
+        </div>
+
+        <!-- SOCIAL -->
+
+        <div class="flex items-center justify-center gap-5">
+
+          <!-- LINKEDIN -->
+
+          <a href="https://www.linkedin.com/in/saritha-ayyappan-9bb70810/"
+
+             target="_blank"
+
+             class="social-icon">
+
+            <img
+
+              src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+
+              alt="LinkedIn"
+
+              class="w-10 h-10 rounded-lg shadow-md"
+
+            >
+
+          </a>
+
+          <!-- GITHUB -->
+
+          <a href="https://github.com/sarithaca"
+
+             target="_blank"
+
+             class="social-icon">
+
+            <img
+
+              src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+
+              alt="GitHub"
+
+              class="w-10 h-10 rounded-full bg-white p-1"
+
+            >
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
 
 </body>
+
 </html>
