@@ -185,7 +185,33 @@
       }
 
     }
+/* ACTIVE NAV ITEM */
 
+.nav-link.active {
+
+  color: white;
+
+  background: rgba(255,255,255,0.05);
+
+}
+
+/* SHOW ACTIVE INDICATOR */
+
+.nav-link.active .nav-indicator {
+
+  opacity: 1;
+
+  box-shadow: 0 0 10px rgba(34,211,238,0.55);
+
+}
+
+/* SMOOTH HOVER */
+
+.nav-link:hover {
+
+  transform: translateX(4px);
+
+}
   </style>
 
 </head>
@@ -247,57 +273,136 @@
        <!-- NAVIGATION -->
 
 <nav class="mt-8 flex flex-col space-y-2 text-[13px] w-full">
+ <!-- HOME -->
+<a href="#home"
 
-  <a href="#home"
+   class="nav-link active relative w-full flex items-center gap-3 px-4 py-2.5 rounded-xl
 
-     class="nav-link w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-slate-300 leading-none hover:bg-slate-800 hover:text-white transition">
+          text-white leading-none bg-white/5
 
-    <span class="w-6 text-center text-lg leading-none">🏠</span>
+          hover:bg-slate-800 hover:text-white transition-all duration-300">
 
-    <span>Home</span>
+  <!-- ACTIVE SIDELINE -->
 
-  </a>
+  <span class="nav-indicator absolute left-0 top-1/2 -translate-y-1/2
 
-  <a href="#experience"
+               h-5 w-[2px] rounded-full bg-cyan-400 opacity-100">
 
-     class="nav-link w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-slate-300 leading-none hover:bg-slate-800 hover:text-white transition">
+  </span>
 
-    <span class="w-6 text-center text-lg leading-none">💼</span>
+  <span class="w-6 text-center text-lg leading-none">🏠</span>
 
-    <span>Experience</span>
+  <span>Home</span>
 
-  </a>
+</a>
+ <!-- EXPERIENCE -->
+ <a href="#experience"
 
-  <a href="#skills"
+   class="nav-link relative w-full flex items-center gap-3 px-4 py-2.5 rounded-xl
 
-     class="nav-link w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-slate-300 leading-none hover:bg-slate-800 hover:text-white transition">
+          text-slate-300 leading-none
 
-    <span class="w-6 text-center text-lg leading-none">⚡</span>
+          hover:bg-slate-800 hover:text-white
 
-    <span>Skills</span>
+          transition-all duration-300">
 
-  </a>
+  <span class="nav-indicator absolute left-0 top-1/2 -translate-y-1/2
 
-  <a href="#projects"
+               h-5 w-[2px] rounded-full bg-cyan-400 opacity-0
 
-     class="nav-link w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-slate-300 leading-none hover:bg-slate-800 hover:text-white transition">
+               transition-all duration-300">
 
-    <span class="w-6 text-center text-lg leading-none">🚀</span>
+  </span>
 
-    <span>Projects</span>
+  <span class="w-6 text-center text-lg leading-none">💼</span>
 
-  </a>
+  <span>Experience</span>
 
-  <a href="#contact"
+</a>
 
-     class="nav-link w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-slate-300 leading-none hover:bg-slate-800 hover:text-white transition">
+  <!-- SKILLS -->
 
-    <span class="w-6 text-center text-lg leading-none">✉</span>
+<a href="#skills"
 
-    <span>Contact</span>
+   class="nav-link relative w-full flex items-center gap-3 px-4 py-2.5 rounded-xl
 
-  </a>
+          text-slate-300 leading-none
 
+          hover:bg-slate-800 hover:text-white
+
+          transition-all duration-300">
+
+  <!-- ACTIVE SIDELINE -->
+
+  <span class="nav-indicator absolute left-0 top-1/2 -translate-y-1/2
+
+               h-5 w-[2px] rounded-full bg-cyan-400 opacity-0
+
+               transition-all duration-300">
+
+  </span>
+
+  <span class="w-6 text-center text-lg leading-none">⚡</span>
+
+  <span>Skills</span>
+
+</a>
+
+<!-- PROJECTS -->
+
+<a href="#projects"
+
+   class="nav-link relative w-full flex items-center gap-3 px-4 py-2.5 rounded-xl
+
+          text-slate-300 leading-none
+
+          hover:bg-slate-800 hover:text-white
+
+          transition-all duration-300">
+
+  <!-- ACTIVE SIDELINE -->
+
+  <span class="nav-indicator absolute left-0 top-1/2 -translate-y-1/2
+
+               h-5 w-[2px] rounded-full bg-cyan-400 opacity-0
+
+               transition-all duration-300">
+
+  </span>
+
+  <span class="w-6 text-center text-lg leading-none">🚀</span>
+
+  <span>Projects</span>
+
+</a>
+
+<!-- CONTACT -->
+
+<a href="#contact"
+
+   class="nav-link relative w-full flex items-center gap-3 px-4 py-2.5 rounded-xl
+
+          text-slate-300 leading-none
+
+          hover:bg-slate-800 hover:text-white
+
+          transition-all duration-300">
+
+  <!-- ACTIVE SIDELINE -->
+
+  <span class="nav-indicator absolute left-0 top-1/2 -translate-y-1/2
+
+               h-5 w-[2px] rounded-full bg-cyan-400 opacity-0
+
+               transition-all duration-300">
+
+  </span>
+
+  <span class="w-6 text-center text-lg leading-none">✉</span>
+
+  <span>Contact</span>
+
+</a>
 </nav>
       </div>
 
@@ -1150,6 +1255,45 @@ window.addEventListener("scroll", () => {
     link.classList.remove("active");
 
     if (link.getAttribute("href").includes(current)) {
+
+      link.classList.add("active");
+
+    }
+
+  });
+
+});
+
+</script>
+  <script>
+
+const sections = document.querySelectorAll("section[id]");
+
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+
+  let current = "";
+
+  sections.forEach(section => {
+
+    const sectionTop = section.offsetTop - 140;
+
+    if (window.scrollY >= sectionTop) {
+
+      current = section.getAttribute("id");
+
+    }
+
+  });
+
+  navLinks.forEach(link => {
+
+    link.classList.remove("active");
+
+    const href = link.getAttribute("href").substring(1);
+
+    if (href === current) {
 
       link.classList.add("active");
 
