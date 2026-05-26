@@ -1306,8 +1306,56 @@ window.addEventListener("scroll", () => {
   });
 
 });
+  // SCROLL TO TOP BUTTON
+
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+
+  if (window.scrollY > 300) {
+
+    scrollTopBtn.classList.remove("hidden");
+
+    scrollTopBtn.classList.add("flex");
+
+  } else {
+
+    scrollTopBtn.classList.remove("flex");
+
+    scrollTopBtn.classList.add("hidden");
+
+  }
+
+});
+
+// SCROLL TO TOP ACTION
+
+scrollTopBtn.addEventListener("click", () => {
+
+  window.scrollTo({
+
+    top: 0,
+
+    behavior: "smooth"
+
+  });
+
+});
 
 </script>
+  <!-- SCROLL TO TOP BUTTON -->
+
+<button id="scrollTopBtn"
+
+class="fixed bottom-6 right-6 z-50 hidden items-center justify-center
+
+w-11 h-11 rounded-full glass text-white text-lg
+
+hover:-translate-y-1 transition-all duration-300">
+
+^
+
+</button>
 </body>
 
 </html>
