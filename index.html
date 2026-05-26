@@ -276,7 +276,7 @@
  <!-- HOME -->
  <a href="#home"
 
-   class="nav-link active relative w-full flex items-center gap-3 px-4 py-2.5 rounded-xl
+   class="nav-link relative w-full flex items-center gap-3 px-4 py-2.5 rounded-xl
 
           text-white leading-none bg-white/5
 
@@ -1265,7 +1265,7 @@ window.addEventListener("scroll", () => {
 });
 
 </script>
-  <script>
+<script>
 
 const sections = document.querySelectorAll("section[id]");
 
@@ -1277,9 +1277,9 @@ window.addEventListener("scroll", () => {
 
   sections.forEach(section => {
 
-    const sectionTop = section.offsetTop - 140;
+    const rect = section.getBoundingClientRect();
 
-    if (window.scrollY >= sectionTop) {
+    if (rect.top <= 120 && rect.bottom >= 120) {
 
       current = section.getAttribute("id");
 
@@ -1291,7 +1291,7 @@ window.addEventListener("scroll", () => {
 
     link.classList.remove("active");
 
-    const href = link.getAttribute("href").substring(1);
+    const href = link.getAttribute("href").replace("#", "");
 
     if (href === current) {
 
